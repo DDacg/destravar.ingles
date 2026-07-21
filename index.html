@@ -1,1 +1,935 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>document.documentElement.classList.add('js');</script>
+<title>Como destravar seu inglês — Davi Canal | Inglês de Verdade</title>
+<meta name="description" content="Você estudou inglês por anos e ainda trava na hora de falar? Este ebook mostra os 4 motivos reais que te travam — e o conserto prático de cada um. Edição refinada, por Davi Canal." />
+<meta name="author" content="Davi Canal" />
+<meta name="theme-color" content="#16243f" />
 
+<!-- Open Graph / social -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Inglês de Verdade" />
+<meta property="og:title" content="Como destravar seu inglês — Davi Canal" />
+<meta property="og:description" content="Por que você trava na hora de falar, e o que fazer pra parar. Os 4 motivos reais que te travam e o conserto de cada um." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Como destravar seu inglês — Davi Canal" />
+<meta name="twitter:description" content="Por que você trava na hora de falar, e o que fazer pra parar." />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%2316243f%22/%3E%3Crect x=%223%22 y=%223%22 width=%2258%22 height=%2258%22 rx=%2212%22 fill=%22none%22 stroke=%22%23c9a24a%22 stroke-width=%221.5%22 opacity=%220.55%22/%3E%3Cg fill=%22none%22 stroke=%22%23c9a24a%22 stroke-width=%224.4%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2224%22 cy=%2224%22 r=%229.5%22/%3E%3Cpath d=%22M30.7 30.7 L46 46%22/%3E%3Cpath d=%22M40 40 L45 35%22/%3E%3Cpath d=%22M46 46 L50 42%22/%3E%3C/g%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<style>
+/* =========================================================================
+   Inglês de Verdade — "Como destravar seu inglês"
+   Sales site design system. Palette matched to the book cover:
+   deep navy + gold + cream.
+   ========================================================================= */
+
+:root {
+  /* Brand colours */
+  --navy:        #16243f;
+  --navy-deep:   #101b30;
+  --navy-card:   #1d2f4d;
+  --navy-line:   rgba(233, 223, 201, 0.14);
+
+  --gold:        #c9a24a;
+  --gold-bright: #ddb867;
+  --gold-soft:   rgba(201, 162, 74, 0.14);
+
+  --cream:       #f7f2ea;
+  --paper:       #f8f4ec;
+  --paper-2:     #f1e9da;
+  --line-light:  #e7ddca;
+
+  --ink:         #1b2536;   /* headings on light   */
+  --body:        #414c60;   /* body text on light  */
+  --body-navy:   #b9c3d4;   /* body text on navy   */
+  --muted-navy:  #8f9bb2;
+
+  /* Type */
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans:  "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* Rhythm */
+  --wrap: 1120px;
+  --prose: 720px;
+  --radius: 16px;
+  --radius-sm: 11px;
+
+  --shadow-card: 0 18px 44px -24px rgba(16, 27, 48, 0.45);
+  --shadow-lift: 0 26px 60px -28px rgba(16, 27, 48, 0.6);
+}
+
+/* -------------------------------------------------------------- base ----- */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--body);
+  background: var(--paper);
+  line-height: 1.65;
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; }
+
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+  color: var(--ink);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.5em;
+}
+
+p { margin: 0 0 1.1em; }
+
+::selection { background: var(--gold); color: var(--navy-deep); }
+
+/* Global top accent line echoing the cover frame */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-bright) 55%, var(--gold));
+  z-index: 100;
+}
+
+/* -------------------------------------------------------------- layout --- */
+.wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+
+section { position: relative; }
+
+.section { padding: clamp(64px, 9vw, 120px) 0; }
+.section--tight { padding: clamp(48px, 6vw, 80px) 0; }
+
+.on-navy   { background: var(--navy);      color: var(--body-navy); }
+.on-navy-2 { background: var(--navy-deep); color: var(--body-navy); }
+.on-paper  { background: var(--paper);     color: var(--body); }
+.on-paper-2{ background: var(--paper-2);    color: var(--body); }
+
+.on-navy h1, .on-navy h2, .on-navy h3, .on-navy h4,
+.on-navy-2 h1, .on-navy-2 h2, .on-navy-2 h3, .on-navy-2 h4 { color: var(--cream); }
+
+/* -------------------------------------------------------- shared bits ---- */
+.eyebrow {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 18px;
+}
+.eyebrow--center { text-align: center; }
+
+.section-head { max-width: 760px; margin: 0 0 clamp(36px, 5vw, 56px); }
+.section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+.section-head h2 { font-size: clamp(2rem, 4.4vw, 3rem); }
+.section-head p { font-size: 1.075rem; color: var(--body); }
+.on-navy .section-head p, .on-navy-2 .section-head p { color: var(--body-navy); }
+
+.lead { font-size: 1.2rem; line-height: 1.6; }
+
+.gold-text { color: var(--gold); }
+.serif { font-family: var(--serif); }
+
+/* --------------------------------------------------------------- buttons - */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 1.02rem;
+  line-height: 1;
+  padding: 18px 34px;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease, border-color .18s ease;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+  color: var(--navy-deep);
+  box-shadow: 0 14px 30px -12px rgba(201, 162, 74, 0.6);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 20px 38px -12px rgba(201, 162, 74, 0.7); }
+.btn-primary:active { transform: translateY(0); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--cream);
+  border-color: rgba(233, 223, 201, 0.32);
+}
+.btn-ghost:hover { border-color: var(--gold); color: var(--gold-bright); }
+
+.btn-ghost-dark {
+  background: transparent;
+  color: var(--ink);
+  border-color: rgba(27, 37, 54, 0.22);
+}
+.btn-ghost-dark:hover { border-color: var(--gold); color: #8a6a1f; }
+
+.btn-lg { padding: 21px 42px; font-size: 1.1rem; }
+.btn-block { display: flex; width: 100%; }
+
+.btn .arw { transition: transform .18s ease; }
+.btn:hover .arw { transform: translateX(3px); }
+
+/* --------------------------------------------------------------- navbar -- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: rgba(22, 36, 63, 0.82);
+  backdrop-filter: saturate(140%) blur(10px);
+  -webkit-backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s ease, background .3s ease;
+}
+.nav.scrolled { border-bottom-color: var(--navy-line); background: rgba(16, 27, 48, 0.92); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--cream); }
+.brand .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 4px var(--gold-soft); }
+.brand b { font-family: var(--sans); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.18em; text-transform: uppercase; }
+.nav-links { display: flex; align-items: center; gap: 30px; }
+.nav-links a { color: var(--body-navy); text-decoration: none; font-size: 0.92rem; font-weight: 500; transition: color .15s ease; }
+.nav-links a:hover { color: var(--cream); }
+.nav-cta {
+  background: var(--gold); color: var(--navy-deep);
+  padding: 10px 20px; border-radius: 999px; font-weight: 700; font-size: 0.9rem;
+  text-decoration: none; transition: transform .15s ease, background .15s ease;
+}
+.nav-cta:hover { background: var(--gold-bright); transform: translateY(-1px); }
+
+/* ---------------------------------------------------------------- hero --- */
+.hero { background: radial-gradient(120% 90% at 78% 8%, #1e3155 0%, var(--navy) 42%, var(--navy-deep) 100%); color: var(--body-navy); overflow: hidden; }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+  padding: clamp(56px, 8vw, 104px) 0 clamp(64px, 8vw, 108px);
+}
+.hero h1 {
+  color: var(--cream);
+  font-size: clamp(2.5rem, 5.4vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+.hero h1 em { font-style: italic; color: var(--gold-bright); }
+.hero .lead { color: var(--body-navy); max-width: 33ch; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+.hero-trust { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 30px; list-style: none; padding: 0; }
+.hero-trust li { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--muted-navy); }
+.hero-trust svg { color: var(--gold); flex: none; }
+
+/* cover mockup */
+.cover-stage { display: flex; justify-content: center; perspective: 1400px; }
+.cover-wrap {
+  position: relative;
+  width: min(340px, 78%);
+  transform: rotateY(-13deg) rotateX(4deg);
+  transform-style: preserve-3d;
+  transition: transform .6s cubic-bezier(.2,.7,.2,1);
+}
+.cover-wrap:hover { transform: rotateY(-4deg) rotateX(1deg) translateY(-4px); }
+.cover-wrap img, .cover-wrap svg {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 9px 9px 5px;
+  box-shadow:
+    -14px 22px 48px -18px rgba(0,0,0,0.65),
+    0 2px 0 rgba(255,255,255,0.05) inset;
+  border: 1px solid rgba(233,223,201,0.10);
+}
+.cover-wrap::after { /* spine */
+  content: "";
+  position: absolute; left: 0; top: 0; bottom: 0; width: 12px;
+  background: linear-gradient(90deg, rgba(0,0,0,0.35), rgba(0,0,0,0));
+  border-radius: 5px 0 0 5px;
+}
+.cover-glow {
+  position: absolute; inset: -18% -12% -22% -12%;
+  background: radial-gradient(closest-side, rgba(201,162,74,0.35), rgba(201,162,74,0));
+  filter: blur(12px); z-index: -1;
+}
+.cover-badge {
+  position: absolute; right: -14px; bottom: 22px;
+  background: var(--gold); color: var(--navy-deep);
+  font-weight: 800; font-size: 0.82rem; letter-spacing: .02em;
+  padding: 10px 15px; border-radius: 999px;
+  box-shadow: var(--shadow-card);
+  transform: translateZ(40px) rotate(3deg);
+}
+
+/* ------------------------------------------------------- epigraph band --- */
+.epigraph { text-align: center; }
+.epigraph p {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 3.4vw, 2.4rem);
+  line-height: 1.28;
+  color: var(--cream);
+  max-width: 18ch;
+  margin: 0 auto;
+  font-weight: 500;
+}
+.epigraph .hl { color: var(--gold-bright); font-style: italic; }
+.rule-dot { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 22px 0 0; }
+.rule-dot span { height: 1px; width: 46px; background: var(--gold); opacity: .6; }
+.rule-dot b { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+
+/* -------------------------------------------------------- recognise ------ */
+.recognise-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 8px; }
+.recog {
+  display: flex; gap: 15px; align-items: flex-start;
+  background: #fff; border: 1px solid var(--line-light);
+  border-radius: var(--radius-sm); padding: 22px 24px;
+  box-shadow: var(--shadow-card);
+}
+.recog .ic {
+  flex: none; width: 34px; height: 34px; border-radius: 9px;
+  display: grid; place-items: center; background: var(--paper-2); color: #9a8248;
+  margin-top: 2px;
+}
+.recog p { margin: 0; color: var(--ink); font-weight: 500; font-size: 1rem; line-height: 1.5; }
+.recognise-punch {
+  margin-top: 40px; text-align: center;
+  font-family: var(--serif); font-size: clamp(1.35rem, 3vw, 1.9rem);
+  color: var(--ink); line-height: 1.35; max-width: 22ch; margin-inline: auto;
+}
+.recognise-punch b { color: #8a6a1f; }
+
+/* ------------------------------------------------------------- story ----- */
+.story-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
+.story-quote {
+  font-family: var(--serif); font-style: italic;
+  font-size: clamp(1.6rem, 3.6vw, 2.5rem); line-height: 1.22;
+  color: var(--cream);
+}
+.story-quote span { color: var(--gold-bright); }
+.story-body p { color: var(--body-navy); }
+.story-body p strong { color: var(--cream); font-weight: 600; }
+.callout {
+  margin-top: 26px; border-left: 3px solid var(--gold);
+  background: rgba(201,162,74,0.08); border-radius: 0 12px 12px 0;
+  padding: 18px 22px; color: var(--body-navy);
+}
+.callout b { color: var(--gold-bright); }
+
+/* ----------------------------------------------------- is / is not ------- */
+.duo { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.duo-card { border-radius: var(--radius); padding: 30px 30px 34px; border: 1px solid var(--line-light); background: #fff; box-shadow: var(--shadow-card); }
+.duo-card.is-not { background: #fbf6f0; }
+.duo-card h3 { font-size: 1.35rem; display: flex; align-items: center; gap: 11px; margin-bottom: 18px; }
+.duo-tag { font-family: var(--sans); font-size: 0.72rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; padding: 5px 11px; border-radius: 999px; }
+.duo-tag.no  { background: #f2ddd6; color: #a4442e; }
+.duo-tag.yes { background: #dcecdf; color: #2f6b45; }
+.duo-list { list-style: none; margin: 0; padding: 0; }
+.duo-list li { display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; border-top: 1px solid var(--line-light); color: var(--ink); font-size: 1.02rem; }
+.duo-list li:first-child { border-top: 0; }
+.duo-list .mk { flex: none; margin-top: 3px; }
+
+/* ------------------------------------------------------- chapters -------- */
+.chapters { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.chapter {
+  position: relative; background: var(--navy-card);
+  border: 1px solid var(--navy-line); border-radius: var(--radius);
+  padding: 32px 32px 30px; overflow: hidden;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.chapter:hover { transform: translateY(-4px); border-color: rgba(201,162,74,0.45); box-shadow: var(--shadow-lift); }
+.chapter .num {
+  font-family: var(--serif); font-size: 3.4rem; line-height: 1; color: rgba(201,162,74,0.28);
+  font-weight: 600; position: absolute; top: 18px; right: 26px;
+}
+.chapter h3 { color: var(--cream); font-size: 1.4rem; margin: 0 0 10px; max-width: 12ch; }
+.chapter .prob { color: var(--muted-navy); font-size: 0.98rem; margin: 0 0 18px; max-width: 34ch; }
+.chapter .fix {
+  display: flex; gap: 11px; align-items: flex-start;
+  border-top: 1px solid var(--navy-line); padding-top: 16px;
+  color: var(--body-navy); font-size: 0.98rem;
+}
+.chapter .fix b { color: var(--gold-bright); font-weight: 600; }
+.chapter .fix svg { color: var(--gold); flex: none; margin-top: 3px; }
+.chapter.closing { grid-column: 1 / -1; background: linear-gradient(120deg, var(--navy-card), #223a5f); display: grid; grid-template-columns: auto 1fr; gap: 26px; align-items: center; }
+.chapter.closing .num { position: static; font-size: 3rem; }
+.chapter.closing h3 { max-width: none; }
+
+/* ------------------------------------------------------- reductions ------ */
+.chips { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.chip {
+  background: #fff; border: 1px solid var(--line-light); border-radius: 12px;
+  padding: 13px 18px; box-shadow: var(--shadow-card); text-align: center; min-width: 120px;
+}
+.chip .real { font-family: var(--serif); font-size: 1.3rem; color: var(--ink); font-weight: 600; }
+.chip .eq { display: block; font-size: 0.82rem; color: var(--gold); font-weight: 700; margin-top: 2px; letter-spacing: .01em; }
+.chip .ex { display: block; font-size: 0.8rem; color: var(--body); opacity: .8; margin-top: 4px; font-style: italic; }
+.chips-note { text-align: center; margin: 30px auto 0; max-width: 40ch; color: var(--body); }
+
+/* ---------------------------------------------------------- quotes ------- */
+.quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.qcard {
+  background: var(--navy-card); border: 1px solid var(--navy-line);
+  border-radius: var(--radius); padding: 30px 28px;
+}
+.qcard .mark { font-family: var(--serif); font-size: 3rem; line-height: .6; color: var(--gold); height: 26px; }
+.qcard p { font-family: var(--serif); font-size: 1.28rem; line-height: 1.32; color: var(--cream); margin: 14px 0 0; font-weight: 500; }
+
+/* ---------------------------------------------------------- author ------- */
+.author-grid { display: grid; grid-template-columns: auto 1fr; gap: clamp(28px, 5vw, 56px); align-items: center; }
+.author-mark {
+  width: 150px; height: 150px; border-radius: 50%;
+  display: grid; place-items: center; flex: none;
+  background: radial-gradient(circle at 30% 25%, #22375c, var(--navy-deep));
+  border: 1.5px solid var(--gold); color: var(--gold);
+  font-family: var(--serif); font-size: 3rem; font-weight: 600;
+  box-shadow: 0 0 0 8px var(--gold-soft);
+}
+.author-body h2 { font-size: clamp(1.8rem, 3.6vw, 2.4rem); }
+.author-body .sig { font-family: var(--serif); font-style: italic; font-size: 1.3rem; color: var(--gold); margin-top: 6px; }
+
+/* --------------------------------------------------------- deliverable --- */
+.get-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.get {
+  background: #fff; border: 1px solid var(--line-light); border-radius: var(--radius-sm);
+  padding: 26px 22px; text-align: center; box-shadow: var(--shadow-card);
+}
+.get .ic { width: 46px; height: 46px; margin: 0 auto 14px; border-radius: 12px; background: var(--paper-2); color: #9a8248; display: grid; place-items: center; }
+.get b { display: block; color: var(--ink); font-size: 1.05rem; margin-bottom: 4px; }
+.get span { font-size: 0.9rem; color: var(--body); }
+
+/* ------------------------------------------------------------- price ----- */
+.price-wrap { display: flex; justify-content: center; }
+.price-card {
+  width: 100%; max-width: 560px; background: #fff; color: var(--body);
+  border-radius: 22px; padding: clamp(32px, 5vw, 48px);
+  box-shadow: 0 40px 80px -40px rgba(0,0,0,0.55);
+  border: 1px solid rgba(201,162,74,0.4);
+  position: relative; text-align: center;
+}
+.price-card .kicker { color: var(--gold); font-weight: 700; letter-spacing: .16em; text-transform: uppercase; font-size: 0.76rem; }
+.price-card h3 { font-size: 1.7rem; margin: 10px 0 22px; }
+.price-main { display: flex; align-items: baseline; justify-content: center; gap: 6px; }
+.price-main .cur { font-family: var(--serif); font-size: 1.6rem; color: var(--ink); align-self: flex-start; margin-top: 12px; }
+.price-main .val { font-family: var(--serif); font-size: clamp(3.6rem, 9vw, 5rem); font-weight: 600; color: var(--ink); line-height: 1; }
+.price-intl { margin: 12px 0 4px; font-size: 0.95rem; color: var(--body); }
+.price-intl b { color: var(--ink); }
+.price-once { display: inline-block; margin-top: 6px; background: var(--paper-2); color: #7c6320; font-weight: 700; font-size: 0.82rem; padding: 6px 14px; border-radius: 999px; }
+.price-list { list-style: none; margin: 26px 0; padding: 24px 0; border-top: 1px solid var(--line-light); border-bottom: 1px solid var(--line-light); text-align: left; display: grid; gap: 12px; }
+.price-list li { display: flex; gap: 12px; align-items: flex-start; color: var(--ink); font-size: 1rem; }
+.price-list svg { color: #2f6b45; flex: none; margin-top: 3px; }
+.price-sub { margin-top: 16px; font-size: 0.85rem; color: var(--body); display: flex; align-items: center; justify-content: center; gap: 8px; }
+.price-sub svg { color: var(--gold); flex: none; }
+
+/* --------------------------------------------------------------- faq ----- */
+.faq { max-width: var(--prose); margin: 0 auto; }
+.faq details { border-bottom: 1px solid var(--line-light); }
+.faq summary {
+  list-style: none; cursor: pointer; padding: 22px 44px 22px 4px; position: relative;
+  font-family: var(--serif); font-size: 1.2rem; color: var(--ink); font-weight: 600;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "+"; position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
+  font-family: var(--sans); font-size: 1.5rem; color: var(--gold); transition: transform .2s ease;
+}
+.faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+.faq details p { padding: 0 44px 24px 4px; margin: 0; color: var(--body); }
+
+/* ---------------------------------------------------------- final cta ---- */
+.final { text-align: center; }
+.final h2 { font-size: clamp(2.2rem, 5vw, 3.4rem); color: var(--cream); max-width: 16ch; margin: 0 auto 18px; }
+.final h2 em { font-style: italic; color: var(--gold-bright); }
+.final .lead { color: var(--body-navy); max-width: 44ch; margin: 0 auto 32px; }
+.final .fineprint { margin-top: 22px; color: var(--muted-navy); font-size: 0.9rem; }
+
+/* ------------------------------------------------------------- footer ---- */
+.footer { background: var(--navy-deep); color: var(--muted-navy); padding: 56px 0 40px; border-top: 1px solid var(--navy-line); }
+.footer-top { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-start; }
+.footer .brand b { color: var(--cream); }
+.footer-tag { max-width: 34ch; margin: 14px 0 0; font-size: 0.92rem; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 8px 26px; }
+.footer-links a { color: var(--body-navy); text-decoration: none; font-size: 0.92rem; }
+.footer-links a:hover { color: var(--gold-bright); }
+.footer-bottom { margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--navy-line); display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; font-size: 0.82rem; color: var(--muted-navy); }
+
+/* ---------------------------------------------------------- reveal ------- */
+/* Progressive enhancement: content is visible by default. Only once JS adds
+   `.js` to <html> do we hide it for the scroll-reveal animation — so a JS
+   failure never leaves sections invisible. */
+html.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+html.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html.js .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+  .cover-wrap { transition: none; }
+}
+
+/* --------------------------------------------------------- responsive ---- */
+@media (max-width: 900px) {
+  body { font-size: 17px; }
+  .hero-grid { grid-template-columns: 1fr; text-align: center; padding-top: 40px; }
+  .hero .lead { margin-inline: auto; }
+  .hero-cta, .hero-trust { justify-content: center; }
+  .hero-order-cover { order: -1; margin-bottom: 8px; }
+  .story-grid, .author-grid, .duo, .recognise-grid, .chapters, .quotes, .get-grid { grid-template-columns: 1fr; }
+  .get-grid { grid-template-columns: 1fr 1fr; }
+  .chapter.closing { grid-template-columns: 1fr; text-align: left; }
+  .nav-links a:not(.nav-cta) { display: none; }
+  .author-grid { text-align: center; justify-items: center; }
+}
+@media (max-width: 560px) {
+  .wrap { padding: 0 18px; }
+  .recognise-grid, .get-grid { grid-template-columns: 1fr; }
+  .btn { width: 100%; }
+  .hero-cta { flex-direction: column; }
+  .chapter .num { font-size: 2.6rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================ NAV ===== -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#inicio" aria-label="Inglês de Verdade">
+      <span class="dot" aria-hidden="true"></span>
+      <b>Inglês de Verdade</b>
+    </a>
+    <nav class="nav-links">
+      <a href="#reconhece">Você trava?</a>
+      <a href="#conteudo">O conteúdo</a>
+      <a href="#comprar">Preço</a>
+      <a class="nav-cta" href="#comprar">Comprar</a>
+    </nav>
+  </div>
+</header>
+
+<!-- =========================================================== HERO ===== -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Coleção Inglês de Verdade · Edição refinada</p>
+      <h1>Você não trava porque seu inglês é <em>ruim</em>.</h1>
+      <p class="lead">Você trava porque ninguém te ensinou a <strong>usar</strong> o inglês quando o coração dispara e a fila anda. Este é o livro que conserta exatamente isso.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="https://buy.stripe.com/fZu3cv08d68G1e02d2gUM05">
+          Quero destravar — R$ 37
+          <svg class="arw" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-ghost btn-lg" href="#conteudo">Ver o que tem dentro</a>
+      </div>
+      <ul class="hero-trust">
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg> Ebook em PDF</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg> Acesso imediato</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2.5"/><path d="M11 18h2"/></svg> Lê no celular ou computador</li>
+      </ul>
+    </div>
+
+    <div class="cover-stage hero-order-cover">
+      <div class="cover-wrap">
+        <span class="cover-glow" aria-hidden="true"></span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 595" role="img" aria-label="Capa do ebook Como destravar seu inglês, de Davi Canal">
+          <defs>
+            <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#1a2c4b"/>
+              <stop offset="1" stop-color="#132038"/>
+            </linearGradient>
+          </defs>
+          <rect width="420" height="595" fill="url(#bg)"/>
+          <!-- double frame, echoing the printed edition -->
+          <rect x="14" y="14" width="392" height="567" fill="none" stroke="#c9a24a" stroke-width="1.6"/>
+          <rect x="26" y="26" width="368" height="543" fill="none" stroke="#c9a24a" stroke-width="1" opacity="0.4"/>
+          <!-- eyebrow -->
+          <text x="210" y="112" text-anchor="middle" fill="#c9a24a" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="3.4">INGLÊS DE VERDADE</text>
+          <line x1="158" y1="127" x2="262" y2="127" stroke="#c9a24a" stroke-width="1" opacity="0.85"/>
+          <!-- title -->
+          <text x="210" y="262" text-anchor="middle" fill="#f7f2ea" font-family="Georgia, 'Times New Roman', serif" font-size="49" font-weight="700">Como destravar</text>
+          <text x="210" y="312" text-anchor="middle" fill="#f7f2ea" font-family="Georgia, 'Times New Roman', serif" font-size="49" font-weight="700">seu inglês</text>
+          <!-- rule with dot -->
+          <line x1="120" y1="346" x2="176" y2="346" stroke="#c9a24a" stroke-width="1" opacity="0.85"/>
+          <circle cx="210" cy="346" r="3" fill="#c9a24a"/>
+          <line x1="244" y1="346" x2="300" y2="346" stroke="#c9a24a" stroke-width="1" opacity="0.85"/>
+          <!-- subtitle -->
+          <text x="210" y="392" text-anchor="middle" fill="#d9d3c7" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="16.5">Por que você trava na hora de falar,</text>
+          <text x="210" y="414" text-anchor="middle" fill="#d9d3c7" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="16.5">e o que fazer pra parar.</text>
+          <!-- author -->
+          <text x="210" y="526" text-anchor="middle" fill="#c9a24a" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2.6">DAVI CANAL</text>
+        </svg>
+        <span class="cover-badge">PDF</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================= EPIGRAPH ===== -->
+<section class="section--tight on-navy-2 epigraph">
+  <div class="wrap">
+    <p>Existe o inglês que se aprende.<br>E existe o inglês que <span class="hl">se vive</span>.</p>
+    <div class="rule-dot" aria-hidden="true"><span></span><b></b><span></span></div>
+  </div>
+</section>
+
+<!-- ====================================================== RECOGNISE ===== -->
+<section class="section on-paper" id="reconhece">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow eyebrow--center">Você já viveu isto</p>
+      <h2>Você sabe as palavras. Mas na hora, não sai nada.</h2>
+      <p>Não precisa ser um McDonald's. Pode ter sido qualquer um destes momentos:</p>
+    </div>
+
+    <div class="recognise-grid">
+      <div class="recog reveal">
+        <span class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
+        <p>Entendeu tudo na reunião — mas não abriu a boca uma vez sequer.</p>
+      </div>
+      <div class="recog reveal">
+        <span class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
+        <p>O atendente perguntou algo simples e você respondeu "yes", torcendo pra ser a resposta certa.</p>
+      </div>
+      <div class="recog reveal">
+        <span class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
+        <p>Adiou por dias uma ligação — só porque teria que falar inglês.</p>
+      </div>
+      <div class="recog reveal">
+        <span class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
+        <p>Riu junto de uma piada que não entendeu, só pra não ter que dizer "sorry, can you repeat?".</p>
+      </div>
+    </div>
+
+    <p class="recognise-punch reveal">Se você se reconheceu, entenda a coisa mais importante deste livro: você não travou porque seu inglês é ruim. <b>Travou porque ninguém te apresentou esse inglês.</b></p>
+  </div>
+</section>
+
+<!-- ========================================================== STORY ===== -->
+<section class="section on-navy">
+  <div class="wrap story-grid">
+    <div class="reveal">
+      <p class="eyebrow">A história por trás do livro</p>
+      <p class="story-quote">"Eu tinha estudado inglês a vida toda. E não consegui <span>pedir um lanche</span>."</p>
+    </div>
+    <div class="story-body reveal">
+      <p>Num McDonald's qualquer, com a família toda esperando, o atendente falou rápido — <em>hi-what-can-I-getcha</em> — e eu <strong>travei</strong>. A frase estava pronta na minha cabeça. Não saiu. Peguei o celular, liguei pra minha prima e passei o telefone pro atendente pedir por mim.</p>
+      <p>Eu sabia mais gramática que muita gente fluente. Passava em prova. E mesmo assim, na hora exata, nada saiu. Demorei pra entender por quê — e a resposta é o motivo deste livro existir.</p>
+      <div class="callout">
+        <p style="margin:0">É como tirar carteira de motorista. Você decora todas as placas e tira nota máxima na prova. Aí senta no carro, no trânsito de verdade, com gente buzinando — e trava. <b>Saber as regras e dirigir são duas habilidades diferentes.</b> Inglês é igual: você estudou a prova teórica. Ninguém te treinou o volante.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== IS / IS NOT ===== -->
+<section class="section on-paper-2">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow eyebrow--center">Pra deixar claro</p>
+      <h2>O que este livro é — e o que ele não é</h2>
+      <p>A régua aqui não é fluência, nem sotaque perfeito, nem nunca mais errar. A régua é você conseguir participar normalmente.</p>
+    </div>
+    <div class="duo">
+      <div class="duo-card is-not reveal">
+        <h3><span class="duo-tag no">Não é</span></h3>
+        <ul class="duo-list">
+          <li><span class="mk" style="color:#a4442e" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span> Mais um curso, mais um app, mais mil palavras no caderno.</li>
+          <li><span class="mk" style="color:#a4442e" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span> Mais gramática e mais teoria pra você concordar e esquecer.</li>
+          <li><span class="mk" style="color:#a4442e" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span> Uma promessa de fluência em X dias ou de perder o sotaque.</li>
+        </ul>
+      </div>
+      <div class="duo-card reveal">
+        <h3><span class="duo-tag yes">É</span></h3>
+        <ul class="duo-list">
+          <li><span class="mk" style="color:#2f6b45" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Um jeito de <strong>usar</strong> o inglês que você, em algum nível, já tem.</li>
+          <li><span class="mk" style="color:#2f6b45" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Prático: cada capítulo tem um <strong>"o que fazer essa semana"</strong>.</li>
+          <li><span class="mk" style="color:#2f6b45" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Direto ao ponto — dá pra ler de uma sentada e começar hoje.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================= CHAPTERS ===== -->
+<section class="section on-navy" id="conteudo">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow eyebrow--center">O que você vai aprender</p>
+      <h2>O travamento não é um monstro vago. Tem 4 causas — e cada uma tem conserto.</h2>
+      <p>Você vai ler cada uma e pensar "é exatamente isso que acontece comigo". E depois de reconhecer, vai saber o que fazer.</p>
+    </div>
+
+    <div class="chapters">
+      <article class="chapter reveal">
+        <span class="num">01</span>
+        <h3>O tradutor mental</h3>
+        <p class="prob">Você ouve, traduz pro português, pensa a resposta, traduz de volta pro inglês — e a conversa já andou. Você vive um passo atrás.</p>
+        <p class="fix"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Como parar de traduzir e falar direto: a régua dos 30%, os blocos prontos e o pré-carregamento das situações que se repetem. <b>Falar 30% da frase resolve 100% da situação.</b></span></p>
+      </article>
+
+      <article class="chapter reveal">
+        <span class="num">02</span>
+        <h3>O inglês que ninguém te ensinou</h3>
+        <p class="prob">Você conhece todas as palavras da frase. Mas quando o nativo fala rápido e grudado, não entende quase nada — e conclui que seu ouvido "não presta".</p>
+        <p class="fix"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>As reduções que aparecem o tempo todo (<b>gonna, wanna, whaddya</b>) e como treinar o ouvido no inglês real — não no áudio de curso, devagar e perfeito.</span></p>
+      </article>
+
+      <article class="chapter reveal">
+        <span class="num">03</span>
+        <h3>O medo de errar</h3>
+        <p class="prob">Você monta a frase perfeita na cabeça com medo de escorregar. E, no meio desse medo todo, não sai nada. O perfeccionismo te cala.</p>
+        <p class="fix"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>A técnica <b>"erre de propósito"</b> pra provar, com seus próprios olhos, que a consequência que você teme simplesmente não existe.</span></p>
+      </article>
+
+      <article class="chapter reveal">
+        <span class="num">04</span>
+        <h3>O buraco entre ouvir e falar</h3>
+        <p class="prob">"Quando eu souber mais, aí eu começo a falar." Então você espera. E o falar fica sempre pra depois. Só que esse dia nunca chega.</p>
+        <p class="fix"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Por que <b>a confiança é filha de falar</b> — e treinos de risco zero (narrar o dia, uma frase por dia) que destravam sua boca sozinho, sem ninguém te ouvir.</span></p>
+      </article>
+
+      <article class="chapter closing reveal">
+        <span class="num">✦</span>
+        <div>
+          <h3>Fechamento — Não voltar a travar</h3>
+          <p class="fix" style="border:0;padding:0;margin-top:8px"><span>Destravar não é um evento, é um hábito. A regra que sustenta tudo depois que você fecha o livro: <b>participe, não sobreviva.</b> Cada vez que você participa em vez de fugir, o medo encolhe.</span></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== REDUCTIONS ===== -->
+<section class="section on-paper">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow eyebrow--center">Uma amostra do que tem dentro</p>
+      <h2>O inglês real não é o inglês do livro</h2>
+      <p>No papel está "what do you want". Na rua sai "whaddya want", tudo grudado. Aprenda as reduções mais comuns e metade do "não entendi" evapora.</p>
+    </div>
+
+    <div class="chips">
+      <div class="chip reveal"><span class="real">gonna</span><span class="eq">= going to</span><span class="ex">"I'm gonna call you"</span></div>
+      <div class="chip reveal"><span class="real">wanna</span><span class="eq">= want to</span><span class="ex">"Do you wanna go?"</span></div>
+      <div class="chip reveal"><span class="real">gotta</span><span class="eq">= got to</span><span class="ex">"I gotta go"</span></div>
+      <div class="chip reveal"><span class="real">gimme</span><span class="eq">= give me</span><span class="ex">"Gimme a sec"</span></div>
+      <div class="chip reveal"><span class="real">lemme</span><span class="eq">= let me</span><span class="ex">"Lemme see"</span></div>
+      <div class="chip reveal"><span class="real">kinda</span><span class="eq">= kind of</span><span class="ex">"It's kinda cold"</span></div>
+      <div class="chip reveal"><span class="real">dunno</span><span class="eq">= don't know</span><span class="ex">"I dunno"</span></div>
+      <div class="chip reveal"><span class="real">whatcha</span><span class="eq">= what are you</span><span class="ex">"Whatcha doing?"</span></div>
+      <div class="chip reveal"><span class="real">getcha</span><span class="eq">= get you</span><span class="ex">"What can I getcha?"</span></div>
+      <div class="chip reveal"><span class="real">whaddya</span><span class="eq">= what do you</span><span class="ex">"Whaddya want?"</span></div>
+      <div class="chip reveal"><span class="real">ya</span><span class="eq">= you</span><span class="ex">"See ya"</span></div>
+      <div class="chip reveal"><span class="real">'em</span><span class="eq">= them</span><span class="ex">"I saw 'em"</span></div>
+    </div>
+    <p class="chips-note reveal">No livro, além da lista completa, você aprende <strong>como treinar o ouvido de verdade</strong> pra reconhecer tudo isso na velocidade da vida real.</p>
+  </div>
+</section>
+
+<!-- ========================================================= QUOTES ===== -->
+<section class="section--tight on-navy-2">
+  <div class="wrap">
+    <div class="quotes">
+      <figure class="qcard reveal" style="margin:0">
+        <div class="mark" aria-hidden="true">"</div>
+        <p>A confiança é filha de falar — não o contrário.</p>
+      </figure>
+      <figure class="qcard reveal" style="margin:0">
+        <div class="mark" aria-hidden="true">"</div>
+        <p>Participe, não sobreviva.</p>
+      </figure>
+      <figure class="qcard reveal" style="margin:0">
+        <div class="mark" aria-hidden="true">"</div>
+        <p>Não precisa ser perfeito. Precisa ser frequente.</p>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================= AUTHOR ===== -->
+<section class="section on-paper">
+  <div class="wrap author-grid">
+    <div class="author-mark reveal" aria-hidden="true">DC</div>
+    <div class="author-body reveal">
+      <p class="eyebrow">Quem escreveu</p>
+      <h2>Davi Canal</h2>
+      <p>Eu estudei inglês por anos. Sabia os verbos, passava em qualquer prova. E, mesmo assim, um dia não consegui pedir um lanche — tive que ligar pra minha prima e entregar o telefone pro atendente.</p>
+      <p>Levei um tempo pra entender por que, se eu sabia inglês, nada saía na hora H. A resposta virou este livro: eu não travava porque meu inglês era ruim. Travava porque ninguém tinha me ensinado a usar o inglês na vida real, com uma pessoa de verdade esperando resposta.</p>
+      <p>Hoje eu peço meu próprio lanche. Não porque meu inglês ficou perfeito — ainda erro, ainda tem coisa que não entendo — mas porque parei de esperar ficar pronto e comecei a participar. Escrevi este livro pra encurtar esse caminho pra você.</p>
+      <p class="sig">— Davi Canal</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================== DELIVERABLE ===== -->
+<section class="section--tight on-paper-2">
+  <div class="wrap">
+    <div class="get-grid">
+      <div class="get reveal">
+        <span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span>
+        <b>Ebook em PDF</b><span>Edição refinada. Lê em qualquer aparelho.</span>
+      </div>
+      <div class="get reveal">
+        <span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+        <b>~40 min de leitura</b><span>Direto ao ponto, sem enrolação.</span>
+      </div>
+      <div class="get reveal">
+        <span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg></span>
+        <b>Acesso imediato</b><span>O link de download chega assim que você paga.</span>
+      </div>
+      <div class="get reveal">
+        <span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M18.2 8c-2.5 0-3.6 2-5.2 4-1.6 2-2.7 4-5.2 4a4 4 0 0 1 0-8c2.5 0 3.6 2 5.2 4 1.6 2 2.7 4 5.2 4a4 4 0 0 0 0-8Z"/></svg></span>
+        <b>Pagamento único</b><span>Sem assinatura. É seu pra sempre.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================== PRICE ===== -->
+<section class="section on-navy" id="comprar">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow eyebrow--center">Comece hoje</p>
+      <h2>Destrave seu inglês por menos que uma pizza</h2>
+    </div>
+
+    <div class="price-wrap">
+      <div class="price-card reveal">
+        <p class="kicker">Ebook · Edição refinada</p>
+        <h3>Como destravar seu inglês</h3>
+        <div class="price-main">
+          <span class="cur">R$</span>
+          <span class="val">37</span>
+        </div>
+        <p class="price-intl">Fora do Brasil? <b>US$ 11.99</b> · <b>€ 9,99</b></p>
+        <span class="price-once">Pagamento único · acesso vitalício</span>
+
+        <ul class="price-list">
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> O ebook completo em PDF (edição refinada)</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Os 4 motivos que te travam — e o conserto de cada um</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> As reduções do inglês real pra destravar seu ouvido</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Um "o que fazer essa semana" prático em cada capítulo</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Acesso imediato e para sempre</li>
+        </ul>
+
+        <a class="btn btn-primary btn-lg btn-block" href="https://buy.stripe.com/fZu3cv08d68G1e02d2gUM05">
+          Comprar agora
+          <svg class="arw" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <p class="price-sub"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Pagamento seguro via Stripe · você recebe o link na hora</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ FAQ ===== -->
+<section class="section on-paper" id="faq">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow eyebrow--center">Perguntas frequentes</p>
+      <h2>Ainda em dúvida?</h2>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary>Serve pra mim, que sei pouco inglês?</summary>
+        <p>Serve. A régua deste livro não é fluência nem sotaque perfeito — é você conseguir usar o inglês que já tem: pedir seu lanche, responder um colega, participar da conversa. Ele foi feito exatamente pra quem estudou e ainda trava.</p>
+      </details>
+      <details>
+        <summary>Como eu recebo o ebook?</summary>
+        <p>Assim que o pagamento é confirmado no Stripe, você é levado a uma página com o botão de download. É um PDF: você baixa e lê onde quiser, quantas vezes quiser.</p>
+      </details>
+      <details>
+        <summary>Em qual formato está?</summary>
+        <p>PDF. Abre no celular, tablet ou computador, sem precisar de nenhum app. Edição refinada, pensada pra leitura de uma sentada (uns 40 minutos).</p>
+      </details>
+      <details>
+        <summary>Preciso saber muita gramática?</summary>
+        <p>Não. Este não é um livro pra você aprender mais gramática ou mais mil palavras. É pra você usar o que já sabe quando a pressão bate — e vem com uma ação prática pra fazer em cada capítulo.</p>
+      </details>
+      <details>
+        <summary>Posso pagar em real, dólar ou euro?</summary>
+        <p>Pode. O checkout é feito pelo Stripe, com pagamento seguro. Os valores são R$ 37, US$ 11.99 ou € 9,99.</p>
+      </details>
+      <details>
+        <summary>E se eu moro fora (ou pretendo morar)?</summary>
+        <p>Melhor ainda. O livro nasceu de situações reais no exterior — do balcão do McDonald's à ligação que você adia. É exatamente pra esses momentos.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== FINAL CTA ===== -->
+<section class="section on-navy-2 final">
+  <div class="wrap">
+    <h2 class="reveal">Começa pela <em>próxima frase</em>.</h2>
+    <p class="lead reveal">Parar de sobreviver em inglês e começar a participar normalmente. Não daqui a um ano, quando você "souber mais". Agora, com o inglês que você já tem dentro de você.</p>
+    <a class="btn btn-primary btn-lg reveal" href="https://buy.stripe.com/fZu3cv08d68G1e02d2gUM05">
+      Destravar meu inglês — R$ 37
+      <svg class="arw" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <p class="fineprint reveal">PDF · Acesso imediato · Pagamento único e seguro via Stripe</p>
+  </div>
+</section>
+
+<!-- ========================================================= FOOTER ===== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="#inicio"><span class="dot" aria-hidden="true"></span><b>Inglês de Verdade</b></a>
+        <p class="footer-tag">"Como destravar seu inglês", de Davi Canal. Por que você trava na hora de falar, e o que fazer pra parar.</p>
+      </div>
+      <nav class="footer-links" aria-label="Rodapé">
+        <a href="#conteudo">O conteúdo</a>
+        <a href="#comprar">Preço</a>
+        <a href="#faq">Dúvidas</a>
+        <a href="mailto:canaldavipeterli@gmail.com">Contato</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Inglês de Verdade · Davi Canal. Todos os direitos reservados.</span>
+      <span>Pagamento processado com segurança pelo Stripe.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Nav shadow on scroll
+  var nav = document.getElementById('nav');
+  var onScroll = function () { nav.classList.toggle('scrolled', window.scrollY > 12); };
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Reveal on scroll
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+  }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
