@@ -4,18 +4,18 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <script>document.documentElement.classList.add('js');</script>
-<title>Como destravar seu inglês — Davi Canal | Inglês de Verdade</title>
-<meta name="description" content="Você estudou inglês por anos e ainda trava na hora de falar? Este ebook mostra os 4 motivos reais que te travam — e o conserto prático de cada um. Edição refinada, por Davi Canal." />
+<title>Como destravar seu inglês, de Davi Canal | Inglês de Verdade</title>
+<meta name="description" content="Você estudou inglês por anos e ainda trava na hora de falar? Este ebook mostra os 4 motivos reais que te travam, e o conserto prático de cada um. Edição refinada, por Davi Canal." />
 <meta name="author" content="Davi Canal" />
 <meta name="theme-color" content="#16243f" />
 
 <!-- Open Graph / social -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Inglês de Verdade" />
-<meta property="og:title" content="Como destravar seu inglês — Davi Canal" />
+<meta property="og:title" content="Como destravar seu inglês, de Davi Canal" />
 <meta property="og:description" content="Por que você trava na hora de falar, e o que fazer pra parar. Os 4 motivos reais que te travam e o conserto de cada um." />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Como destravar seu inglês — Davi Canal" />
+<meta name="twitter:title" content="Como destravar seu inglês, de Davi Canal" />
 <meta name="twitter:description" content="Por que você trava na hora de falar, e o que fazer pra parar." />
 
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%2316243f%22/%3E%3Crect x=%223%22 y=%223%22 width=%2258%22 height=%2258%22 rx=%2212%22 fill=%22none%22 stroke=%22%23c9a24a%22 stroke-width=%221.5%22 opacity=%220.55%22/%3E%3Cg fill=%22none%22 stroke=%22%23c9a24a%22 stroke-width=%224.4%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2224%22 cy=%2224%22 r=%229.5%22/%3E%3Cpath d=%22M30.7 30.7 L46 46%22/%3E%3Cpath d=%22M40 40 L45 35%22/%3E%3Cpath d=%22M46 46 L50 42%22/%3E%3C/g%3E%3C/svg%3E" />
@@ -417,6 +417,42 @@ section { position: relative; }
 .get b { display: block; color: var(--ink); font-size: 1.05rem; margin-bottom: 4px; }
 .get span { font-size: 0.9rem; color: var(--body); }
 
+/* ------------------------------------------------------------- bonus ----- */
+.bonus-head .eyebrow { color: #8a6a1f; }
+.bonus-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.bonus-card {
+  position: relative; background: #fff; border: 1px solid var(--line-light);
+  border-top: 3px solid var(--gold); border-radius: var(--radius);
+  padding: 30px 30px 32px; box-shadow: var(--shadow-card);
+}
+.bonus-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 16px; }
+.bonus-tag {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: var(--sans); font-size: 0.72rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--navy-deep); background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+  padding: 6px 13px; border-radius: 999px;
+}
+.bonus-tag svg { flex: none; }
+.bonus-free {
+  font-family: var(--sans); font-size: 0.72rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  color: #2f6b45; background: #dcecdf; padding: 6px 12px; border-radius: 999px; white-space: nowrap;
+}
+.bonus-card h3 { font-size: 1.4rem; color: var(--ink); margin: 0 0 8px; }
+.bonus-sub { color: var(--body); font-size: 1rem; margin: 0 0 18px; }
+.bonus-list { list-style: none; margin: 0; padding: 18px 0 0; border-top: 1px solid var(--line-light); display: grid; gap: 12px; }
+.bonus-list li { display: flex; gap: 11px; align-items: flex-start; color: var(--ink); font-size: 0.97rem; line-height: 1.5; }
+.bonus-list svg { color: var(--gold); flex: none; margin-top: 3px; }
+.bonus-meta { display: flex; align-items: center; gap: 8px; margin-top: 18px; font-size: 0.85rem; color: var(--body); opacity: .85; }
+.bonus-meta svg { color: #9a8248; flex: none; }
+
+/* price bonus lines */
+.price-list li.bonus-line { align-items: center; }
+.price-list li.bonus-line .bl-tag {
+  flex: none; font-family: var(--sans); font-size: 0.64rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--navy-deep); background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+  padding: 4px 9px; border-radius: 999px; margin-right: 2px;
+}
+
 /* ------------------------------------------------------------- price ----- */
 .price-wrap { display: flex; justify-content: center; }
 .price-card {
@@ -426,8 +462,8 @@ section { position: relative; }
   border: 1px solid rgba(201,162,74,0.4);
   position: relative; text-align: center;
 }
-.price-card .kicker { color: var(--gold); font-weight: 700; letter-spacing: .16em; text-transform: uppercase; font-size: 0.76rem; }
-.price-card h3 { font-size: 1.7rem; margin: 10px 0 22px; }
+.price-card .kicker { color: #8a6a1f; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; font-size: 0.78rem; }
+.price-card h3 { font-size: 1.7rem; margin: 10px 0 22px; color: var(--ink); }
 .price-main { display: flex; align-items: baseline; justify-content: center; gap: 6px; }
 .price-main .cur { font-family: var(--serif); font-size: 1.6rem; color: var(--ink); align-self: flex-start; margin-top: 12px; }
 .price-main .val { font-family: var(--serif); font-size: clamp(3.6rem, 9vw, 5rem); font-weight: 600; color: var(--ink); line-height: 1; }
@@ -491,7 +527,7 @@ html.js .reveal.in { opacity: 1; transform: none; }
   .hero .lead { margin-inline: auto; }
   .hero-cta, .hero-trust { justify-content: center; }
   .hero-order-cover { order: -1; margin-bottom: 8px; }
-  .story-grid, .author-grid, .duo, .recognise-grid, .chapters, .quotes, .get-grid { grid-template-columns: 1fr; }
+  .story-grid, .author-grid, .duo, .recognise-grid, .chapters, .quotes, .get-grid, .bonus-grid { grid-template-columns: 1fr; }
   .get-grid { grid-template-columns: 1fr 1fr; }
   .chapter.closing { grid-template-columns: 1fr; text-align: left; }
   .nav-links a:not(.nav-cta) { display: none; }
@@ -518,6 +554,7 @@ html.js .reveal.in { opacity: 1; transform: none; }
     <nav class="nav-links">
       <a href="#reconhece">Você trava?</a>
       <a href="#conteudo">O conteúdo</a>
+      <a href="#bonus">Bônus</a>
       <a href="#comprar">Preço</a>
       <a class="nav-cta" href="#comprar">Comprar</a>
     </nav>
@@ -539,6 +576,7 @@ html.js .reveal.in { opacity: 1; transform: none; }
         <a class="btn btn-ghost btn-lg" href="#conteudo">Ver o que tem dentro</a>
       </div>
       <ul class="hero-trust">
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 18l-6 3.4 1.4-6.8L2.3 9.9l6.9-.8L12 2z"/></svg> + 2 bônus grátis</li>
         <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg> Ebook em PDF</li>
         <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg> Acesso imediato</li>
         <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2.5"/><path d="M11 18h2"/></svg> Lê no celular ou computador</li>
@@ -601,7 +639,7 @@ html.js .reveal.in { opacity: 1; transform: none; }
     <div class="recognise-grid">
       <div class="recog reveal">
         <span class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
-        <p>Entendeu tudo na reunião — mas não abriu a boca uma vez sequer.</p>
+        <p>Entendeu tudo na reunião, mas não abriu a boca uma vez sequer.</p>
       </div>
       <div class="recog reveal">
         <span class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
@@ -609,7 +647,7 @@ html.js .reveal.in { opacity: 1; transform: none; }
       </div>
       <div class="recog reveal">
         <span class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
-        <p>Adiou por dias uma ligação — só porque teria que falar inglês.</p>
+        <p>Adiou por dias uma ligação, só porque teria que falar inglês.</p>
       </div>
       <div class="recog reveal">
         <span class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
@@ -629,10 +667,10 @@ html.js .reveal.in { opacity: 1; transform: none; }
       <p class="story-quote">"Eu tinha estudado inglês a vida toda. E não consegui <span>pedir um lanche</span>."</p>
     </div>
     <div class="story-body reveal">
-      <p>Num McDonald's qualquer, com a família toda esperando, o atendente falou rápido — <em>hi-what-can-I-getcha</em> — e eu <strong>travei</strong>. A frase estava pronta na minha cabeça. Não saiu. Peguei o celular, liguei pra minha prima e passei o telefone pro atendente pedir por mim.</p>
-      <p>Eu sabia mais gramática que muita gente fluente. Passava em prova. E mesmo assim, na hora exata, nada saiu. Demorei pra entender por quê — e a resposta é o motivo deste livro existir.</p>
+      <p>Num McDonald's qualquer, com a família toda esperando, o atendente falou rápido, <em>hi-what-can-I-getcha</em>, e eu <strong>travei</strong>. A frase estava pronta na minha cabeça. Não saiu. Peguei o celular, liguei pra minha prima e passei o telefone pro atendente pedir por mim.</p>
+      <p>Eu sabia mais gramática que muita gente fluente. Passava em prova. E mesmo assim, na hora exata, nada saiu. Demorei pra entender por quê, e a resposta é o motivo deste livro existir.</p>
       <div class="callout">
-        <p style="margin:0">É como tirar carteira de motorista. Você decora todas as placas e tira nota máxima na prova. Aí senta no carro, no trânsito de verdade, com gente buzinando — e trava. <b>Saber as regras e dirigir são duas habilidades diferentes.</b> Inglês é igual: você estudou a prova teórica. Ninguém te treinou o volante.</p>
+        <p style="margin:0">É como tirar carteira de motorista. Você decora todas as placas e tira nota máxima na prova. Aí senta no carro, no trânsito de verdade, com gente buzinando, e trava. <b>Saber as regras e dirigir são duas habilidades diferentes.</b> Inglês é igual: você estudou a prova teórica. Ninguém te treinou o volante.</p>
       </div>
     </div>
   </div>
@@ -643,7 +681,7 @@ html.js .reveal.in { opacity: 1; transform: none; }
   <div class="wrap">
     <div class="section-head center reveal">
       <p class="eyebrow eyebrow--center">Pra deixar claro</p>
-      <h2>O que este livro é — e o que ele não é</h2>
+      <h2>O que este livro é, e o que ele não é</h2>
       <p>A régua aqui não é fluência, nem sotaque perfeito, nem nunca mais errar. A régua é você conseguir participar normalmente.</p>
     </div>
     <div class="duo">
@@ -660,7 +698,7 @@ html.js .reveal.in { opacity: 1; transform: none; }
         <ul class="duo-list">
           <li><span class="mk" style="color:#2f6b45" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Um jeito de <strong>usar</strong> o inglês que você, em algum nível, já tem.</li>
           <li><span class="mk" style="color:#2f6b45" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Prático: cada capítulo tem um <strong>"o que fazer essa semana"</strong>.</li>
-          <li><span class="mk" style="color:#2f6b45" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Direto ao ponto — dá pra ler de uma sentada e começar hoje.</li>
+          <li><span class="mk" style="color:#2f6b45" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Direto ao ponto: dá pra ler de uma sentada e começar hoje.</li>
         </ul>
       </div>
     </div>
@@ -672,7 +710,7 @@ html.js .reveal.in { opacity: 1; transform: none; }
   <div class="wrap">
     <div class="section-head center reveal">
       <p class="eyebrow eyebrow--center">O que você vai aprender</p>
-      <h2>O travamento não é um monstro vago. Tem 4 causas — e cada uma tem conserto.</h2>
+      <h2>O travamento não é um monstro vago. Tem 4 causas, e cada uma tem conserto.</h2>
       <p>Você vai ler cada uma e pensar "é exatamente isso que acontece comigo". E depois de reconhecer, vai saber o que fazer.</p>
     </div>
 
@@ -680,15 +718,15 @@ html.js .reveal.in { opacity: 1; transform: none; }
       <article class="chapter reveal">
         <span class="num">01</span>
         <h3>O tradutor mental</h3>
-        <p class="prob">Você ouve, traduz pro português, pensa a resposta, traduz de volta pro inglês — e a conversa já andou. Você vive um passo atrás.</p>
+        <p class="prob">Você ouve, traduz pro português, pensa a resposta, traduz de volta pro inglês, e a conversa já andou. Você vive um passo atrás.</p>
         <p class="fix"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Como parar de traduzir e falar direto: a régua dos 30%, os blocos prontos e o pré-carregamento das situações que se repetem. <b>Falar 30% da frase resolve 100% da situação.</b></span></p>
       </article>
 
       <article class="chapter reveal">
         <span class="num">02</span>
         <h3>O inglês que ninguém te ensinou</h3>
-        <p class="prob">Você conhece todas as palavras da frase. Mas quando o nativo fala rápido e grudado, não entende quase nada — e conclui que seu ouvido "não presta".</p>
-        <p class="fix"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>As reduções que aparecem o tempo todo (<b>gonna, wanna, whaddya</b>) e como treinar o ouvido no inglês real — não no áudio de curso, devagar e perfeito.</span></p>
+        <p class="prob">Você conhece todas as palavras da frase. Mas quando o nativo fala rápido e grudado, não entende quase nada, e conclui que seu ouvido "não presta".</p>
+        <p class="fix"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>As reduções que aparecem o tempo todo (<b>gonna, wanna, whaddya</b>) e como treinar o ouvido no inglês real, não no áudio de curso, devagar e perfeito.</span></p>
       </article>
 
       <article class="chapter reveal">
@@ -702,13 +740,13 @@ html.js .reveal.in { opacity: 1; transform: none; }
         <span class="num">04</span>
         <h3>O buraco entre ouvir e falar</h3>
         <p class="prob">"Quando eu souber mais, aí eu começo a falar." Então você espera. E o falar fica sempre pra depois. Só que esse dia nunca chega.</p>
-        <p class="fix"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Por que <b>a confiança é filha de falar</b> — e treinos de risco zero (narrar o dia, uma frase por dia) que destravam sua boca sozinho, sem ninguém te ouvir.</span></p>
+        <p class="fix"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Por que <b>a confiança é filha de falar</b>, e treinos de risco zero (narrar o dia, uma frase por dia) que destravam sua boca sozinho, sem ninguém te ouvir.</span></p>
       </article>
 
       <article class="chapter closing reveal">
         <span class="num">✦</span>
         <div>
-          <h3>Fechamento — Não voltar a travar</h3>
+          <h3>Fechamento: não voltar a travar</h3>
           <p class="fix" style="border:0;padding:0;margin-top:8px"><span>Destravar não é um evento, é um hábito. A regra que sustenta tudo depois que você fecha o livro: <b>participe, não sobreviva.</b> Cada vez que você participa em vez de fugir, o medo encolhe.</span></p>
         </div>
       </article>
@@ -749,7 +787,7 @@ html.js .reveal.in { opacity: 1; transform: none; }
     <div class="quotes">
       <figure class="qcard reveal" style="margin:0">
         <div class="mark" aria-hidden="true">"</div>
-        <p>A confiança é filha de falar — não o contrário.</p>
+        <p>A confiança é filha de falar, não o contrário.</p>
       </figure>
       <figure class="qcard reveal" style="margin:0">
         <div class="mark" aria-hidden="true">"</div>
@@ -770,10 +808,10 @@ html.js .reveal.in { opacity: 1; transform: none; }
     <div class="author-body reveal">
       <p class="eyebrow">Quem escreveu</p>
       <h2>Davi Canal</h2>
-      <p>Eu estudei inglês por anos. Sabia os verbos, passava em qualquer prova. E, mesmo assim, um dia não consegui pedir um lanche — tive que ligar pra minha prima e entregar o telefone pro atendente.</p>
+      <p>Eu estudei inglês por anos. Sabia os verbos, passava em qualquer prova. E, mesmo assim, um dia não consegui pedir um lanche, tive que ligar pra minha prima e entregar o telefone pro atendente.</p>
       <p>Levei um tempo pra entender por que, se eu sabia inglês, nada saía na hora H. A resposta virou este livro: eu não travava porque meu inglês era ruim. Travava porque ninguém tinha me ensinado a usar o inglês na vida real, com uma pessoa de verdade esperando resposta.</p>
-      <p>Hoje eu peço meu próprio lanche. Não porque meu inglês ficou perfeito — ainda erro, ainda tem coisa que não entendo — mas porque parei de esperar ficar pronto e comecei a participar. Escrevi este livro pra encurtar esse caminho pra você.</p>
-      <p class="sig">— Davi Canal</p>
+      <p>Hoje eu peço meu próprio lanche. Não porque meu inglês ficou perfeito (ainda erro, ainda tem coisa que não entendo), mas porque parei de esperar ficar pronto e comecei a participar. Escrevi este livro pra encurtar esse caminho pra você.</p>
+      <p class="sig">Davi Canal</p>
     </div>
   </div>
 </section>
@@ -802,17 +840,61 @@ html.js .reveal.in { opacity: 1; transform: none; }
   </div>
 </section>
 
+<!-- ========================================================== BONUS ===== -->
+<section class="section on-paper" id="bonus">
+  <div class="wrap">
+    <div class="section-head center bonus-head reveal">
+      <p class="eyebrow eyebrow--center">Comprando hoje, você não leva só o livro</p>
+      <h2>Leve junto 2 bônus pra sair da teoria e usar o inglês na vida real</h2>
+      <p>O livro te mostra por que você trava. Estes dois bônus te dão o que fazer com isso: no mercado, no restaurante, no trabalho, e todo dia.</p>
+    </div>
+
+    <div class="bonus-grid">
+      <article class="bonus-card reveal">
+        <div class="bonus-top">
+          <span class="bonus-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 18l-6 3.4 1.4-6.8L2.3 9.9l6.9-.8L12 2z"/></svg> Bônus 01</span>
+          <span class="bonus-free">Incluído grátis</span>
+        </div>
+        <h3>Inglês para Situações Reais</h3>
+        <p class="bonus-sub">Um guia de consulta com frases prontas pra você "pré-carregar" antes de viver a situação.</p>
+        <ul class="bonus-list">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 12 situações do dia a dia: mercado, restaurante, aeroporto, hotel, trabalho, médico, banco, transporte, loja, telefone, emergência e small talk</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> O que costumam te perguntar em cada uma, e como responder de forma curta e natural</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Vocabulário essencial, os erros mais comuns e uma dica rápida em cada situação</li>
+        </ul>
+        <p class="bonus-meta"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg> Ebook em PDF · guia de consulta</p>
+      </article>
+
+      <article class="bonus-card reveal">
+        <div class="bonus-top">
+          <span class="bonus-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 18l-6 3.4 1.4-6.8L2.3 9.9l6.9-.8L12 2z"/></svg> Bônus 02</span>
+          <span class="bonus-free">Incluído grátis</span>
+        </div>
+        <h3>Desafio 30 Dias Para Destravar</h3>
+        <p class="bonus-sub">Uma missão por dia, menos de 15 minutos, pra transformar o livro em hábito de verdade.</p>
+        <ul class="bonus-list">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 30 missões práticas, uma pra cada dia do mês</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Menos de 15 minutos por dia, sem desculpa de "não tenho tempo"</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Narrar o dia, "errar de propósito", gravar áudios pra ouvir seu progresso, e muito mais</li>
+        </ul>
+        <p class="bonus-meta"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg> Ebook em PDF · plano de 30 dias</p>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- ========================================================== PRICE ===== -->
 <section class="section on-navy" id="comprar">
   <div class="wrap">
     <div class="section-head center reveal">
       <p class="eyebrow eyebrow--center">Comece hoje</p>
       <h2>Destrave seu inglês por menos que uma pizza</h2>
+      <p>Um preço só, tudo junto: o livro principal e os 2 bônus.</p>
     </div>
 
     <div class="price-wrap">
       <div class="price-card reveal">
-        <p class="kicker">Ebook · Edição refinada</p>
+        <p class="kicker">Ebook + 2 bônus · Edição refinada</p>
         <h3>Como destravar seu inglês</h3>
         <div class="price-main">
           <span class="cur">R$</span>
@@ -823,9 +905,11 @@ html.js .reveal.in { opacity: 1; transform: none; }
 
         <ul class="price-list">
           <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> O ebook completo em PDF (edição refinada)</li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Os 4 motivos que te travam — e o conserto de cada um</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Os 4 motivos que te travam, e o conserto de cada um</li>
           <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> As reduções do inglês real pra destravar seu ouvido</li>
           <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Um "o que fazer essa semana" prático em cada capítulo</li>
+          <li class="bonus-line"><span class="bl-tag">Bônus 1</span> Inglês para Situações Reais: frases prontas pra 12 situações</li>
+          <li class="bonus-line"><span class="bl-tag">Bônus 2</span> Desafio 30 Dias pra transformar o livro em hábito</li>
           <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Acesso imediato e para sempre</li>
         </ul>
 
@@ -849,7 +933,7 @@ html.js .reveal.in { opacity: 1; transform: none; }
     <div class="faq reveal">
       <details>
         <summary>Serve pra mim, que sei pouco inglês?</summary>
-        <p>Serve. A régua deste livro não é fluência nem sotaque perfeito — é você conseguir usar o inglês que já tem: pedir seu lanche, responder um colega, participar da conversa. Ele foi feito exatamente pra quem estudou e ainda trava.</p>
+        <p>Serve. A régua deste livro não é fluência nem sotaque perfeito, é você conseguir usar o inglês que já tem: pedir seu lanche, responder um colega, participar da conversa. Ele foi feito exatamente pra quem estudou e ainda trava.</p>
       </details>
       <details>
         <summary>Como eu recebo o ebook?</summary>
@@ -861,7 +945,7 @@ html.js .reveal.in { opacity: 1; transform: none; }
       </details>
       <details>
         <summary>Preciso saber muita gramática?</summary>
-        <p>Não. Este não é um livro pra você aprender mais gramática ou mais mil palavras. É pra você usar o que já sabe quando a pressão bate — e vem com uma ação prática pra fazer em cada capítulo.</p>
+        <p>Não. Este não é um livro pra você aprender mais gramática ou mais mil palavras. É pra você usar o que já sabe quando a pressão bate, e vem com uma ação prática pra fazer em cada capítulo.</p>
       </details>
       <details>
         <summary>Posso pagar em real, dólar ou euro?</summary>
@@ -869,7 +953,7 @@ html.js .reveal.in { opacity: 1; transform: none; }
       </details>
       <details>
         <summary>E se eu moro fora (ou pretendo morar)?</summary>
-        <p>Melhor ainda. O livro nasceu de situações reais no exterior — do balcão do McDonald's à ligação que você adia. É exatamente pra esses momentos.</p>
+        <p>Melhor ainda. O livro nasceu de situações reais no exterior, do balcão do McDonald's à ligação que você adia. É exatamente pra esses momentos.</p>
       </details>
     </div>
   </div>
