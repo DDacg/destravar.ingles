@@ -464,11 +464,24 @@ section { position: relative; }
 }
 .price-card .kicker { color: #8a6a1f; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; font-size: 0.78rem; }
 .price-card h3 { font-size: 1.7rem; margin: 10px 0 22px; color: var(--ink); }
-.price-main { display: flex; align-items: baseline; justify-content: center; gap: 6px; }
+/* value composition (stacking) */
+.value-stack { margin: 2px 0 22px; text-align: left; border: 1px solid var(--line-light); border-radius: 12px; padding: 14px 16px; background: #fcfaf5; }
+.vs-row { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; padding: 7px 0; font-size: 0.94rem; color: var(--body); }
+.vs-row .vs-price { font-weight: 600; color: var(--ink); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.vs-total { margin-top: 4px; padding-top: 12px; border-top: 1px dashed var(--line-light); }
+.vs-total .vs-item { font-weight: 700; color: var(--ink); }
+.vs-total .vs-price { font-weight: 800; font-size: 1.04rem; }
+
+.price-main { display: flex; align-items: baseline; justify-content: center; gap: 14px; margin-top: 4px; flex-wrap: wrap; }
+.price-was { font-family: var(--serif); font-size: 1.9rem; color: #7f8598; text-decoration: line-through; text-decoration-thickness: 2px; align-self: center; }
+.price-now { display: inline-flex; align-items: baseline; gap: 6px; }
 .price-main .cur { font-family: var(--serif); font-size: 1.6rem; color: var(--ink); align-self: flex-start; margin-top: 12px; }
 .price-main .val { font-family: var(--serif); font-size: clamp(3.6rem, 9vw, 5rem); font-weight: 600; color: var(--ink); line-height: 1; }
 .price-intl { margin: 12px 0 4px; font-size: 0.95rem; color: var(--body); }
 .price-intl b { color: var(--ink); }
+.price-intl .intl-was { color: #8a8fa0; font-size: 0.86rem; }
+.price-tagline { margin: 12px auto 0; max-width: 36ch; font-size: 0.98rem; color: var(--body); }
+.price-tagline b { color: var(--ink); font-weight: 700; }
 .price-once { display: inline-block; margin-top: 6px; background: var(--paper-2); color: #7c6320; font-weight: 700; font-size: 0.82rem; padding: 6px 14px; border-radius: 999px; }
 .price-list { list-style: none; margin: 26px 0; padding: 24px 0; border-top: 1px solid var(--line-light); border-bottom: 1px solid var(--line-light); text-align: left; display: grid; gap: 12px; }
 .price-list li { display: flex; gap: 12px; align-items: flex-start; color: var(--ink); font-size: 1rem; }
@@ -896,12 +909,32 @@ html.js .reveal.in { opacity: 1; transform: none; }
       <div class="price-card reveal">
         <p class="kicker">Ebook + 2 bônus · Edição refinada</p>
         <h3>Como destravar seu inglês</h3>
-        <div class="price-main">
-          <span class="cur">R$</span>
-          <span class="val">37</span>
+
+        <div class="value-stack" aria-label="O que compõe a oferta e quanto cada item vale">
+          <div class="vs-row">
+            <span class="vs-item">Ebook "Como destravar seu inglês"</span>
+            <span class="vs-price">R$ 47</span>
+          </div>
+          <div class="vs-row">
+            <span class="vs-item">Bônus: Inglês para Situações Reais</span>
+            <span class="vs-price">R$ 27</span>
+          </div>
+          <div class="vs-row">
+            <span class="vs-item">Bônus: Desafio 30 Dias Para Destravar Seu Inglês</span>
+            <span class="vs-price">R$ 27</span>
+          </div>
+          <div class="vs-row vs-total">
+            <span class="vs-item">Tudo isso vale</span>
+            <span class="vs-price">R$ 101</span>
+          </div>
         </div>
-        <p class="price-intl">Fora do Brasil? <b>US$ 11.99</b> · <b>€ 9,99</b></p>
-        <span class="price-once">Pagamento único · acesso vitalício</span>
+
+        <div class="price-main">
+          <span class="price-was">R$ 101</span>
+          <span class="price-now"><span class="cur">R$</span><span class="val">37</span></span>
+        </div>
+        <p class="price-intl">Fora do Brasil? <b>US$ 11.99</b> <span class="intl-was">(de US$ 32)</span> · <b>€ 9,99</b> <span class="intl-was">(de € 27)</span></p>
+        <p class="price-tagline">Tudo isso, hoje, por <b>R$ 37</b>. Pagamento único, acesso vitalício.</p>
 
         <ul class="price-list">
           <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> O ebook completo em PDF (edição refinada)</li>
