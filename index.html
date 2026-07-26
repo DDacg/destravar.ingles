@@ -365,7 +365,7 @@ section { position: relative; }
 .chapter .prob { color: var(--muted-navy); font-size: 0.98rem; margin: 0 0 18px; max-width: 34ch; }
 .chapter .fix {
   display: flex; gap: 11px; align-items: flex-start;
-  border-top: 1px solid var(--navy-line); padding-top: 16px;
+  margin-top: 4px;
   color: var(--body-navy); font-size: 0.98rem;
 }
 .chapter .fix b { color: var(--gold-bright); font-weight: 600; }
@@ -482,6 +482,17 @@ section { position: relative; }
 .price-intl .intl-was { color: #8a8fa0; font-size: 0.86rem; }
 .price-tagline { margin: 12px auto 0; max-width: 36ch; font-size: 0.98rem; color: var(--body); }
 .price-tagline b { color: var(--ink); font-weight: 700; }
+/* launch offer badge + countdown */
+.launch-box { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; margin: 4px 0 16px; }
+.launch-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: linear-gradient(180deg, #ff8a4c, #e8542a); color: #fff;
+  font-weight: 800; font-size: 0.82rem; letter-spacing: .01em;
+  padding: 7px 14px; border-radius: 999px;
+  box-shadow: 0 8px 20px -10px rgba(232, 84, 42, .75);
+}
+.launch-timer { font-size: 0.9rem; color: var(--body); }
+.launch-timer b { font-variant-numeric: tabular-nums; color: var(--ink); font-weight: 800; background: var(--paper-2); padding: 3px 9px; border-radius: 7px; margin-left: 2px; }
 .price-once { display: inline-block; margin-top: 6px; background: var(--paper-2); color: #7c6320; font-weight: 700; font-size: 0.82rem; padding: 6px 14px; border-radius: 999px; }
 .price-list { list-style: none; margin: 26px 0; padding: 24px 0; border-top: 1px solid var(--line-light); border-bottom: 1px solid var(--line-light); text-align: left; display: grid; gap: 12px; }
 .price-list li { display: flex; gap: 12px; align-items: flex-start; color: var(--ink); font-size: 1rem; }
@@ -516,9 +527,14 @@ section { position: relative; }
 .footer-top { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-start; }
 .footer .brand b { color: var(--cream); }
 .footer-tag { max-width: 34ch; margin: 14px 0 0; font-size: 0.92rem; }
-.footer-links { display: flex; flex-wrap: wrap; gap: 8px 26px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 8px 26px; align-content: start; }
 .footer-links a { color: var(--body-navy); text-decoration: none; font-size: 0.92rem; }
 .footer-links a:hover { color: var(--gold-bright); }
+.footer-contact { display: grid; gap: 10px; align-content: start; }
+.footer-h { color: var(--cream); font-weight: 700; font-size: 0.8rem; letter-spacing: .12em; text-transform: uppercase; margin: 0; }
+.footer-contact a { display: inline-flex; align-items: center; gap: 9px; color: var(--body-navy); text-decoration: none; font-size: 0.92rem; overflow-wrap: anywhere; }
+.footer-contact a:hover { color: var(--gold-bright); }
+.footer-contact a svg { flex: none; color: var(--gold); }
 .footer-bottom { margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--navy-line); display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; font-size: 0.82rem; color: var(--muted-navy); }
 
 /* ---------------------------------------------------------- reveal ------- */
@@ -565,10 +581,8 @@ html.js .reveal.in { opacity: 1; transform: none; }
       <b>Inglês de Verdade</b>
     </a>
     <nav class="nav-links">
-      <a href="#reconhece">Você trava?</a>
       <a href="#conteudo">O conteúdo</a>
       <a href="#bonus">Bônus</a>
-      <a href="#comprar">Preço</a>
       <a class="nav-cta" href="#comprar">Comprar</a>
     </nav>
   </div>
@@ -578,21 +592,19 @@ html.js .reveal.in { opacity: 1; transform: none; }
 <section class="hero" id="inicio">
   <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow">Coleção Inglês de Verdade · Edição refinada</p>
+      <p class="eyebrow">Ebook · por Davi Canal</p>
       <h1>Você não trava porque seu inglês é <em>ruim</em>.</h1>
-      <p class="lead">Você trava porque ninguém te ensinou a <strong>usar</strong> o inglês quando o coração dispara e a fila anda. Este é o livro que conserta exatamente isso.</p>
+      <p class="lead">Você trava porque ninguém te ensinou a <strong>usar</strong> o inglês na hora da pressão. Este livro conserta exatamente isso.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary btn-lg" href="https://buy.stripe.com/fZu3cv08d68G1e02d2gUM05">
-          Quero destravar — R$ 37
+        <a class="btn btn-primary btn-lg js-buy" href="https://buy.stripe.com/8x214nf37cx41e0g3SgUM06">
+          Quero destravar — <span data-launch="R$ 29,90" data-regular="R$ 37">R$ 29,90</span>
           <svg class="arw" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a class="btn btn-ghost btn-lg" href="#conteudo">Ver o que tem dentro</a>
       </div>
       <ul class="hero-trust">
-        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 18l-6 3.4 1.4-6.8L2.3 9.9l6.9-.8L12 2z"/></svg> + 2 bônus grátis</li>
-        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg> Ebook em PDF</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 18l-6 3.4 1.4-6.8L2.3 9.9l6.9-.8L12 2z"/></svg> Ebook em PDF + 2 bônus</li>
         <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg> Acesso imediato</li>
-        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2.5"/><path d="M11 18h2"/></svg> Lê no celular ou computador</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Pagamento único</li>
       </ul>
     </div>
 
@@ -632,223 +644,38 @@ html.js .reveal.in { opacity: 1; transform: none; }
   </div>
 </section>
 
-<!-- ======================================================= EPIGRAPH ===== -->
-<section class="section--tight on-navy-2 epigraph">
-  <div class="wrap">
-    <p>Existe o inglês que se aprende.<br>E existe o inglês que <span class="hl">se vive</span>.</p>
-    <div class="rule-dot" aria-hidden="true"><span></span><b></b><span></span></div>
-  </div>
-</section>
-
-<!-- ====================================================== RECOGNISE ===== -->
-<section class="section on-paper" id="reconhece">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <p class="eyebrow eyebrow--center">Você já viveu isto</p>
-      <h2>Você sabe as palavras. Mas na hora, não sai nada.</h2>
-      <p>Não precisa ser um McDonald's. Pode ter sido qualquer um destes momentos:</p>
-    </div>
-
-    <div class="recognise-grid">
-      <div class="recog reveal">
-        <span class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
-        <p>Entendeu tudo na reunião, mas não abriu a boca uma vez sequer.</p>
-      </div>
-      <div class="recog reveal">
-        <span class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
-        <p>O atendente perguntou algo simples e você respondeu "yes", torcendo pra ser a resposta certa.</p>
-      </div>
-      <div class="recog reveal">
-        <span class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
-        <p>Adiou por dias uma ligação, só porque teria que falar inglês.</p>
-      </div>
-      <div class="recog reveal">
-        <span class="ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span>
-        <p>Riu junto de uma piada que não entendeu, só pra não ter que dizer "sorry, can you repeat?".</p>
-      </div>
-    </div>
-
-    <p class="recognise-punch reveal">Se você se reconheceu, entenda a coisa mais importante deste livro: você não travou porque seu inglês é ruim. <b>Travou porque ninguém te apresentou esse inglês.</b></p>
-  </div>
-</section>
-
-<!-- ========================================================== STORY ===== -->
-<section class="section on-navy">
-  <div class="wrap story-grid">
-    <div class="reveal">
-      <p class="eyebrow">A história por trás do livro</p>
-      <p class="story-quote">"Eu tinha estudado inglês a vida toda. E não consegui <span>pedir um lanche</span>."</p>
-    </div>
-    <div class="story-body reveal">
-      <p>Num McDonald's qualquer, com a família toda esperando, o atendente falou rápido, <em>hi-what-can-I-getcha</em>, e eu <strong>travei</strong>. A frase estava pronta na minha cabeça. Não saiu. Peguei o celular, liguei pra minha prima e passei o telefone pro atendente pedir por mim.</p>
-      <p>Eu sabia mais gramática que muita gente fluente. Passava em prova. E mesmo assim, na hora exata, nada saiu. Demorei pra entender por quê, e a resposta é o motivo deste livro existir.</p>
-      <div class="callout">
-        <p style="margin:0">É como tirar carteira de motorista. Você decora todas as placas e tira nota máxima na prova. Aí senta no carro, no trânsito de verdade, com gente buzinando, e trava. <b>Saber as regras e dirigir são duas habilidades diferentes.</b> Inglês é igual: você estudou a prova teórica. Ninguém te treinou o volante.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================================================== IS / IS NOT ===== -->
-<section class="section on-paper-2">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <p class="eyebrow eyebrow--center">Pra deixar claro</p>
-      <h2>O que este livro é, e o que ele não é</h2>
-      <p>A régua aqui não é fluência, nem sotaque perfeito, nem nunca mais errar. A régua é você conseguir participar normalmente.</p>
-    </div>
-    <div class="duo">
-      <div class="duo-card is-not reveal">
-        <h3><span class="duo-tag no">Não é</span></h3>
-        <ul class="duo-list">
-          <li><span class="mk" style="color:#a4442e" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span> Mais um curso, mais um app, mais mil palavras no caderno.</li>
-          <li><span class="mk" style="color:#a4442e" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span> Mais gramática e mais teoria pra você concordar e esquecer.</li>
-          <li><span class="mk" style="color:#a4442e" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></span> Uma promessa de fluência em X dias ou de perder o sotaque.</li>
-        </ul>
-      </div>
-      <div class="duo-card reveal">
-        <h3><span class="duo-tag yes">É</span></h3>
-        <ul class="duo-list">
-          <li><span class="mk" style="color:#2f6b45" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Um jeito de <strong>usar</strong> o inglês que você, em algum nível, já tem.</li>
-          <li><span class="mk" style="color:#2f6b45" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Prático: cada capítulo tem um <strong>"o que fazer essa semana"</strong>.</li>
-          <li><span class="mk" style="color:#2f6b45" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Direto ao ponto: dá pra ler de uma sentada e começar hoje.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ======================================================= CHAPTERS ===== -->
 <section class="section on-navy" id="conteudo">
   <div class="wrap">
     <div class="section-head center reveal">
       <p class="eyebrow eyebrow--center">O que você vai aprender</p>
-      <h2>O travamento não é um monstro vago. Tem 4 causas, e cada uma tem conserto.</h2>
-      <p>Você vai ler cada uma e pensar "é exatamente isso que acontece comigo". E depois de reconhecer, vai saber o que fazer.</p>
+      <h2>4 motivos que te travam, e o conserto de cada um</h2>
     </div>
 
     <div class="chapters">
       <article class="chapter reveal">
         <span class="num">01</span>
         <h3>O tradutor mental</h3>
-        <p class="prob">Você ouve, traduz pro português, pensa a resposta, traduz de volta pro inglês, e a conversa já andou. Você vive um passo atrás.</p>
-        <p class="fix"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Como parar de traduzir e falar direto: a régua dos 30%, os blocos prontos e o pré-carregamento das situações que se repetem. <b>Falar 30% da frase resolve 100% da situação.</b></span></p>
+        <p class="fix"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Como parar de traduzir na cabeça e falar direto. <b>Falar 30% da frase resolve 100% da situação.</b></span></p>
       </article>
 
       <article class="chapter reveal">
         <span class="num">02</span>
         <h3>O inglês que ninguém te ensinou</h3>
-        <p class="prob">Você conhece todas as palavras da frase. Mas quando o nativo fala rápido e grudado, não entende quase nada, e conclui que seu ouvido "não presta".</p>
-        <p class="fix"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>As reduções que aparecem o tempo todo (<b>gonna, wanna, whaddya</b>) e como treinar o ouvido no inglês real, não no áudio de curso, devagar e perfeito.</span></p>
+        <p class="fix"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>As reduções do inglês real (<b>gonna, wanna, whaddya</b>) e como treinar o ouvido de verdade.</span></p>
       </article>
 
       <article class="chapter reveal">
         <span class="num">03</span>
         <h3>O medo de errar</h3>
-        <p class="prob">Você monta a frase perfeita na cabeça com medo de escorregar. E, no meio desse medo todo, não sai nada. O perfeccionismo te cala.</p>
-        <p class="fix"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>A técnica <b>"erre de propósito"</b> pra provar, com seus próprios olhos, que a consequência que você teme simplesmente não existe.</span></p>
+        <p class="fix"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>A técnica <b>"erre de propósito"</b> pra provar que a consequência que você teme não existe.</span></p>
       </article>
 
       <article class="chapter reveal">
         <span class="num">04</span>
         <h3>O buraco entre ouvir e falar</h3>
-        <p class="prob">"Quando eu souber mais, aí eu começo a falar." Então você espera. E o falar fica sempre pra depois. Só que esse dia nunca chega.</p>
-        <p class="fix"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Por que <b>a confiança é filha de falar</b>, e treinos de risco zero (narrar o dia, uma frase por dia) que destravam sua boca sozinho, sem ninguém te ouvir.</span></p>
+        <p class="fix"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Por que <b>a confiança é filha de falar</b>, e treinos de risco zero que destravam sua boca sozinho.</span></p>
       </article>
-
-      <article class="chapter closing reveal">
-        <span class="num">✦</span>
-        <div>
-          <h3>Fechamento: não voltar a travar</h3>
-          <p class="fix" style="border:0;padding:0;margin-top:8px"><span>Destravar não é um evento, é um hábito. A regra que sustenta tudo depois que você fecha o livro: <b>participe, não sobreviva.</b> Cada vez que você participa em vez de fugir, o medo encolhe.</span></p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===================================================== REDUCTIONS ===== -->
-<section class="section on-paper">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <p class="eyebrow eyebrow--center">Uma amostra do que tem dentro</p>
-      <h2>O inglês real não é o inglês do livro</h2>
-      <p>No papel está "what do you want". Na rua sai "whaddya want", tudo grudado. Aprenda as reduções mais comuns e metade do "não entendi" evapora.</p>
-    </div>
-
-    <div class="chips">
-      <div class="chip reveal"><span class="real">gonna</span><span class="eq">= going to</span><span class="ex">"I'm gonna call you"</span></div>
-      <div class="chip reveal"><span class="real">wanna</span><span class="eq">= want to</span><span class="ex">"Do you wanna go?"</span></div>
-      <div class="chip reveal"><span class="real">gotta</span><span class="eq">= got to</span><span class="ex">"I gotta go"</span></div>
-      <div class="chip reveal"><span class="real">gimme</span><span class="eq">= give me</span><span class="ex">"Gimme a sec"</span></div>
-      <div class="chip reveal"><span class="real">lemme</span><span class="eq">= let me</span><span class="ex">"Lemme see"</span></div>
-      <div class="chip reveal"><span class="real">kinda</span><span class="eq">= kind of</span><span class="ex">"It's kinda cold"</span></div>
-      <div class="chip reveal"><span class="real">dunno</span><span class="eq">= don't know</span><span class="ex">"I dunno"</span></div>
-      <div class="chip reveal"><span class="real">whatcha</span><span class="eq">= what are you</span><span class="ex">"Whatcha doing?"</span></div>
-      <div class="chip reveal"><span class="real">getcha</span><span class="eq">= get you</span><span class="ex">"What can I getcha?"</span></div>
-      <div class="chip reveal"><span class="real">whaddya</span><span class="eq">= what do you</span><span class="ex">"Whaddya want?"</span></div>
-      <div class="chip reveal"><span class="real">ya</span><span class="eq">= you</span><span class="ex">"See ya"</span></div>
-      <div class="chip reveal"><span class="real">'em</span><span class="eq">= them</span><span class="ex">"I saw 'em"</span></div>
-    </div>
-    <p class="chips-note reveal">No livro, além da lista completa, você aprende <strong>como treinar o ouvido de verdade</strong> pra reconhecer tudo isso na velocidade da vida real.</p>
-  </div>
-</section>
-
-<!-- ========================================================= QUOTES ===== -->
-<section class="section--tight on-navy-2">
-  <div class="wrap">
-    <div class="quotes">
-      <figure class="qcard reveal" style="margin:0">
-        <div class="mark" aria-hidden="true">"</div>
-        <p>A confiança é filha de falar, não o contrário.</p>
-      </figure>
-      <figure class="qcard reveal" style="margin:0">
-        <div class="mark" aria-hidden="true">"</div>
-        <p>Participe, não sobreviva.</p>
-      </figure>
-      <figure class="qcard reveal" style="margin:0">
-        <div class="mark" aria-hidden="true">"</div>
-        <p>Não precisa ser perfeito. Precisa ser frequente.</p>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- ========================================================= AUTHOR ===== -->
-<section class="section on-paper">
-  <div class="wrap author-grid">
-    <div class="author-mark reveal" aria-hidden="true">DC</div>
-    <div class="author-body reveal">
-      <p class="eyebrow">Quem escreveu</p>
-      <h2>Davi Canal</h2>
-      <p>Eu estudei inglês por anos. Sabia os verbos, passava em qualquer prova. E, mesmo assim, um dia não consegui pedir um lanche, tive que ligar pra minha prima e entregar o telefone pro atendente.</p>
-      <p>Levei um tempo pra entender por que, se eu sabia inglês, nada saía na hora H. A resposta virou este livro: eu não travava porque meu inglês era ruim. Travava porque ninguém tinha me ensinado a usar o inglês na vida real, com uma pessoa de verdade esperando resposta.</p>
-      <p>Hoje eu peço meu próprio lanche. Não porque meu inglês ficou perfeito (ainda erro, ainda tem coisa que não entendo), mas porque parei de esperar ficar pronto e comecei a participar. Escrevi este livro pra encurtar esse caminho pra você.</p>
-      <p class="sig">Davi Canal</p>
-    </div>
-  </div>
-</section>
-
-<!-- ==================================================== DELIVERABLE ===== -->
-<section class="section--tight on-paper-2">
-  <div class="wrap">
-    <div class="get-grid">
-      <div class="get reveal">
-        <span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span>
-        <b>Ebook em PDF</b><span>Edição refinada. Lê em qualquer aparelho.</span>
-      </div>
-      <div class="get reveal">
-        <span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
-        <b>~40 min de leitura</b><span>Direto ao ponto, sem enrolação.</span>
-      </div>
-      <div class="get reveal">
-        <span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg></span>
-        <b>Acesso imediato</b><span>O link de download chega assim que você paga.</span>
-      </div>
-      <div class="get reveal">
-        <span class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M18.2 8c-2.5 0-3.6 2-5.2 4-1.6 2-2.7 4-5.2 4a4 4 0 0 1 0-8c2.5 0 3.6 2 5.2 4 1.6 2 2.7 4 5.2 4a4 4 0 0 0 0-8Z"/></svg></span>
-        <b>Pagamento único</b><span>Sem assinatura. É seu pra sempre.</span>
-      </div>
     </div>
   </div>
 </section>
@@ -857,9 +684,8 @@ html.js .reveal.in { opacity: 1; transform: none; }
 <section class="section on-paper" id="bonus">
   <div class="wrap">
     <div class="section-head center bonus-head reveal">
-      <p class="eyebrow eyebrow--center">Comprando hoje, você não leva só o livro</p>
-      <h2>Leve junto 2 bônus pra sair da teoria e usar o inglês na vida real</h2>
-      <p>O livro te mostra por que você trava. Estes dois bônus te dão o que fazer com isso: no mercado, no restaurante, no trabalho, e todo dia.</p>
+      <p class="eyebrow eyebrow--center">Incluídos, sem custo a mais</p>
+      <h2>Você leva 2 bônus junto com o livro</h2>
     </div>
 
     <div class="bonus-grid">
@@ -869,13 +695,11 @@ html.js .reveal.in { opacity: 1; transform: none; }
           <span class="bonus-free">Incluído grátis</span>
         </div>
         <h3>Inglês para Situações Reais</h3>
-        <p class="bonus-sub">Um guia de consulta com frases prontas pra você "pré-carregar" antes de viver a situação.</p>
+        <p class="bonus-sub">Frases prontas pra você "pré-carregar" antes de viver a situação.</p>
         <ul class="bonus-list">
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 12 situações do dia a dia: mercado, restaurante, aeroporto, hotel, trabalho, médico, banco, transporte, loja, telefone, emergência e small talk</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> O que costumam te perguntar em cada uma, e como responder de forma curta e natural</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Vocabulário essencial, os erros mais comuns e uma dica rápida em cada situação</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 12 situações do dia a dia: mercado, restaurante, aeroporto, trabalho, médico e mais</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> O que te perguntam em cada uma, e como responder curto e natural</li>
         </ul>
-        <p class="bonus-meta"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg> Ebook em PDF · guia de consulta</p>
       </article>
 
       <article class="bonus-card reveal">
@@ -884,13 +708,11 @@ html.js .reveal.in { opacity: 1; transform: none; }
           <span class="bonus-free">Incluído grátis</span>
         </div>
         <h3>Desafio 30 Dias Para Destravar</h3>
-        <p class="bonus-sub">Uma missão por dia, menos de 15 minutos, pra transformar o livro em hábito de verdade.</p>
+        <p class="bonus-sub">Uma missão por dia, menos de 15 minutos, pra transformar o livro em hábito.</p>
         <ul class="bonus-list">
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 30 missões práticas, uma pra cada dia do mês</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Menos de 15 minutos por dia, sem desculpa de "não tenho tempo"</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Narrar o dia, "errar de propósito", gravar áudios pra ouvir seu progresso, e muito mais</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Menos de 15 minutos por dia pra virar hábito</li>
         </ul>
-        <p class="bonus-meta"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg> Ebook em PDF · plano de 30 dias</p>
       </article>
     </div>
   </div>
@@ -902,7 +724,6 @@ html.js .reveal.in { opacity: 1; transform: none; }
     <div class="section-head center reveal">
       <p class="eyebrow eyebrow--center">Comece hoje</p>
       <h2>Destrave seu inglês por menos que uma pizza</h2>
-      <p>Um preço só, tudo junto: o livro principal e os 2 bônus.</p>
     </div>
 
     <div class="price-wrap">
@@ -929,12 +750,17 @@ html.js .reveal.in { opacity: 1; transform: none; }
           </div>
         </div>
 
+        <div class="launch-box" id="launchBox">
+          <span class="launch-badge">🔥 Oferta de Lançamento</span>
+          <span class="launch-timer">Termina em <b id="timerVal">15:00</b></span>
+        </div>
+
         <div class="price-main">
           <span class="price-was">R$ 101</span>
-          <span class="price-now"><span class="cur">R$</span><span class="val">37</span></span>
+          <span class="price-now"><span class="cur">R$</span><span class="val" data-launch="29,90" data-regular="37">29,90</span></span>
         </div>
-        <p class="price-intl">Fora do Brasil? <b>US$ 11.99</b> <span class="intl-was">(de US$ 32)</span> · <b>€ 9,99</b> <span class="intl-was">(de € 27)</span></p>
-        <p class="price-tagline">Tudo isso, hoje, por <b>R$ 37</b>. Pagamento único, acesso vitalício.</p>
+        <p class="price-intl">Fora do Brasil? <b data-launch="US$ 7.99" data-regular="US$ 11.99">US$ 7.99</b> <span class="intl-was">(de US$ 32)</span> · <b data-launch="€ 7,99" data-regular="€ 9,99">€ 7,99</b> <span class="intl-was">(de € 27)</span></p>
+        <p class="price-tagline">Tudo isso, hoje, por <b data-launch="R$ 29,90" data-regular="R$ 37">R$ 29,90</b>. Pagamento único, acesso vitalício.</p>
 
         <ul class="price-list">
           <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> O ebook completo em PDF (edição refinada)</li>
@@ -946,7 +772,7 @@ html.js .reveal.in { opacity: 1; transform: none; }
           <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Acesso imediato e para sempre</li>
         </ul>
 
-        <a class="btn btn-primary btn-lg btn-block" href="https://buy.stripe.com/fZu3cv08d68G1e02d2gUM05">
+        <a class="btn btn-primary btn-lg btn-block js-buy" href="https://buy.stripe.com/8x214nf37cx41e0g3SgUM06">
           Comprar agora
           <svg class="arw" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
@@ -956,49 +782,13 @@ html.js .reveal.in { opacity: 1; transform: none; }
   </div>
 </section>
 
-<!-- ============================================================ FAQ ===== -->
-<section class="section on-paper" id="faq">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <p class="eyebrow eyebrow--center">Perguntas frequentes</p>
-      <h2>Ainda em dúvida?</h2>
-    </div>
-    <div class="faq reveal">
-      <details>
-        <summary>Serve pra mim, que sei pouco inglês?</summary>
-        <p>Serve. A régua deste livro não é fluência nem sotaque perfeito, é você conseguir usar o inglês que já tem: pedir seu lanche, responder um colega, participar da conversa. Ele foi feito exatamente pra quem estudou e ainda trava.</p>
-      </details>
-      <details>
-        <summary>Como eu recebo o ebook?</summary>
-        <p>Assim que o pagamento é confirmado no Stripe, você é levado a uma página com o botão de download. É um PDF: você baixa e lê onde quiser, quantas vezes quiser.</p>
-      </details>
-      <details>
-        <summary>Em qual formato está?</summary>
-        <p>PDF. Abre no celular, tablet ou computador, sem precisar de nenhum app. Edição refinada, pensada pra leitura de uma sentada (uns 40 minutos).</p>
-      </details>
-      <details>
-        <summary>Preciso saber muita gramática?</summary>
-        <p>Não. Este não é um livro pra você aprender mais gramática ou mais mil palavras. É pra você usar o que já sabe quando a pressão bate, e vem com uma ação prática pra fazer em cada capítulo.</p>
-      </details>
-      <details>
-        <summary>Posso pagar em real, dólar ou euro?</summary>
-        <p>Pode. O checkout é feito pelo Stripe, com pagamento seguro. Os valores são R$ 37, US$ 11.99 ou € 9,99.</p>
-      </details>
-      <details>
-        <summary>E se eu moro fora (ou pretendo morar)?</summary>
-        <p>Melhor ainda. O livro nasceu de situações reais no exterior, do balcão do McDonald's à ligação que você adia. É exatamente pra esses momentos.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
 <!-- ====================================================== FINAL CTA ===== -->
 <section class="section on-navy-2 final">
   <div class="wrap">
     <h2 class="reveal">Começa pela <em>próxima frase</em>.</h2>
-    <p class="lead reveal">Parar de sobreviver em inglês e começar a participar normalmente. Não daqui a um ano, quando você "souber mais". Agora, com o inglês que você já tem dentro de você.</p>
-    <a class="btn btn-primary btn-lg reveal" href="https://buy.stripe.com/fZu3cv08d68G1e02d2gUM05">
-      Destravar meu inglês — R$ 37
+    <p class="lead reveal">Com o inglês que você já tem, começando agora.</p>
+    <a class="btn btn-primary btn-lg reveal js-buy" href="https://buy.stripe.com/8x214nf37cx41e0g3SgUM06">
+      Destravar meu inglês — <span data-launch="R$ 29,90" data-regular="R$ 37">R$ 29,90</span>
       <svg class="arw" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
     </a>
     <p class="fineprint reveal">PDF · Acesso imediato · Pagamento único e seguro via Stripe</p>
@@ -1013,11 +803,17 @@ html.js .reveal.in { opacity: 1; transform: none; }
         <a class="brand" href="#inicio"><span class="dot" aria-hidden="true"></span><b>Inglês de Verdade</b></a>
         <p class="footer-tag">"Como destravar seu inglês", de Davi Canal. Por que você trava na hora de falar, e o que fazer pra parar.</p>
       </div>
+      <div class="footer-contact">
+        <p class="footer-h">Fale comigo</p>
+        <a href="https://wa.me/19803614761"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.09 3.19 5.06 4.47.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35zM12 2a10 10 0 0 0-8.6 15.06L2 22l5.06-1.33A10 10 0 1 0 12 2z"/></svg> +1 (980) 361-4761</a>
+        <a href="mailto:canaldavipeterli@gmail.com"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> canaldavipeterli@gmail.com</a>
+        <a href="https://www.instagram.com/davi_canal_p/"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg> @davi_canal_p</a>
+      </div>
       <nav class="footer-links" aria-label="Rodapé">
         <a href="#conteudo">O conteúdo</a>
+        <a href="#bonus">Bônus</a>
         <a href="#comprar">Preço</a>
-        <a href="#faq">Dúvidas</a>
-        <a href="mailto:canaldavipeterli@gmail.com">Contato</a>
+        <a href="contato.html">Contato</a>
       </nav>
     </div>
     <div class="footer-bottom">
@@ -1047,6 +843,60 @@ html.js .reveal.in { opacity: 1; transform: none; }
   }
 
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ---- Oferta de lançamento: contagem de 15 min por visitante ----------
+  // Ao acabar, o preço e os links de compra voltam ao normal (R$ 37).
+  // O prazo é guardado no navegador, então não reinicia a cada recarregar.
+  (function () {
+    var LAUNCH_LINK  = "https://buy.stripe.com/8x214nf37cx41e0g3SgUM06";
+    var REGULAR_LINK = "https://buy.stripe.com/fZu3cv08d68G1e02d2gUM05";
+    var DURATION = 15 * 60 * 1000;               // 15 minutos
+    var KEY = "idv_launch_deadline";
+
+    var deadline;
+    try {
+      deadline = parseInt(localStorage.getItem(KEY), 10);
+      if (!deadline || isNaN(deadline)) {
+        deadline = Date.now() + DURATION;
+        localStorage.setItem(KEY, String(deadline));
+      }
+    } catch (e) { deadline = Date.now() + DURATION; }
+
+    var box     = document.getElementById('launchBox');
+    var tval    = document.getElementById('timerVal');
+    var toggles = document.querySelectorAll('[data-launch]');
+    var buys    = document.querySelectorAll('.js-buy');
+    var applied = null;
+
+    function apply(active) {
+      if (applied === active) return;
+      applied = active;
+      for (var i = 0; i < toggles.length; i++) {
+        toggles[i].textContent = active
+          ? toggles[i].getAttribute('data-launch')
+          : toggles[i].getAttribute('data-regular');
+      }
+      for (var j = 0; j < buys.length; j++) {
+        buys[j].href = active ? LAUNCH_LINK : REGULAR_LINK;
+      }
+      if (box) box.style.display = active ? '' : 'none';
+    }
+
+    function tick() {
+      var left = deadline - Date.now();
+      if (left <= 0) {
+        apply(false);
+        if (tval) tval.textContent = '00:00';
+        clearInterval(iv);
+        return;
+      }
+      apply(true);
+      var m = Math.floor(left / 60000), s = Math.floor((left % 60000) / 1000);
+      if (tval) tval.textContent = (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+    }
+    var iv = setInterval(tick, 250);
+    tick();
+  })();
 </script>
 </body>
 </html>
