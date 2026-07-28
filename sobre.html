@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sobre mim · Davi Canal | Inglês de Verdade</title>
+<meta name="description" content="Quem é o Davi Canal, autor do ebook Como destravar seu inglês, e por que ele escreveu este livro." />
+<meta name="theme-color" content="#16243f" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%2316243f%22/%3E%3Crect x=%223%22 y=%223%22 width=%2258%22 height=%2258%22 rx=%2212%22 fill=%22none%22 stroke=%22%23c9a24a%22 stroke-width=%221.5%22 opacity=%220.55%22/%3E%3Cg fill=%22none%22 stroke=%22%23c9a24a%22 stroke-width=%224.4%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2224%22 cy=%2224%22 r=%229.5%22/%3E%3Cpath d=%22M30.7 30.7 L46 46%22/%3E%3Cpath d=%22M40 40 L45 35%22/%3E%3Cpath d=%22M46 46 L50 42%22/%3E%3C/g%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --navy:        #16243f;
+  --navy-deep:   #101b30;
+  --navy-line:   rgba(233, 223, 201, 0.14);
+  --gold:        #c9a24a;
+  --gold-bright: #ddb867;
+  --gold-soft:   rgba(201, 162, 74, 0.14);
+  --cream:       #f7f2ea;
+  --ink:         #1b2536;
+  --body:        #414c60;
+  --body-navy:   #b9c3d4;
+  --muted-navy:  #8f9bb2;
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans:  "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--body-navy);
+  background: var(--navy-deep);
+  line-height: 1.68;
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+a { color: inherit; }
+::selection { background: var(--gold); color: var(--navy-deep); }
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-bright) 55%, var(--gold));
+  z-index: 100;
+}
+
+.about { min-height: calc(100vh - 4px); display: grid; place-items: center; background: radial-gradient(120% 80% at 50% 0%, #1e3155 0%, var(--navy) 45%, var(--navy-deep) 100%); padding: 60px 24px; }
+.about-card { width: 100%; max-width: 600px; text-align: center; }
+
+.about-mark {
+  width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 24px;
+  display: grid; place-items: center;
+  background: radial-gradient(circle at 30% 25%, #22375c, var(--navy-deep));
+  border: 1.5px solid var(--gold); color: var(--gold);
+  font-family: var(--serif); font-size: 2.6rem; font-weight: 600;
+  box-shadow: 0 0 0 8px var(--gold-soft);
+}
+.eyebrow { font-family: var(--sans); font-weight: 800; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-bright); margin: 0 0 12px; }
+.about-card h1 { font-family: var(--serif); color: var(--cream); font-weight: 600; font-size: clamp(2.1rem, 5.5vw, 2.9rem); line-height: 1.06; letter-spacing: -0.015em; margin: 0 0 24px; }
+
+.about-body { text-align: left; }
+.about-body p { margin: 0 0 1.15em; color: var(--body-navy); }
+.about-body p strong { color: var(--cream); font-weight: 600; }
+.about-sig { font-family: var(--serif); font-style: italic; font-size: 1.25rem; color: var(--gold-bright); margin-top: 4px; }
+
+.about-cta { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; align-items: center; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  font-family: var(--sans); font-weight: 700; font-size: 1.05rem; line-height: 1;
+  padding: 18px 34px; border-radius: 999px; border: 1.5px solid transparent;
+  text-decoration: none; transition: transform .18s ease, box-shadow .18s ease, border-color .15s ease, color .15s ease;
+}
+.btn-primary { background: linear-gradient(180deg, var(--gold-bright), var(--gold)); color: var(--navy-deep); box-shadow: 0 14px 30px -12px rgba(201, 162, 74, 0.6); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 20px 38px -12px rgba(201, 162, 74, 0.7); }
+.about-back { color: var(--gold-bright); text-decoration: none; font-size: 0.95rem; font-weight: 600; }
+.about-back:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<main class="about">
+  <div class="about-card">
+    <div class="about-mark" aria-hidden="true">DC</div>
+    <p class="eyebrow">Sobre mim</p>
+    <h1>Davi Canal</h1>
+
+    <div class="about-body">
+      <p>Eu estudei inglês por anos. Sabia os verbos, passava em qualquer prova. E, mesmo assim, um dia não consegui pedir um lanche num balcão: precisei ligar pra minha prima e passar o telefone pro atendente pedir por mim.</p>
+      <p>Levei um tempo pra entender por quê. Se eu sabia inglês, por que nada saía na hora? A resposta virou um livro. Eu não travava porque meu inglês era ruim. <strong>Travava porque ninguém tinha me ensinado a usar o inglês na vida real</strong>, com uma pessoa de verdade esperando resposta.</p>
+      <p>Hoje eu peço meu próprio lanche. Não porque meu inglês ficou perfeito (ainda erro, ainda tem coisa que não entendo), mas porque parei de esperar ficar pronto e comecei a participar. Escrevi <strong>"Como destravar seu inglês"</strong> pra encurtar esse caminho pra você.</p>
+      <p class="about-sig">Davi Canal</p>
+    </div>
+
+    <div class="about-cta">
+      <a class="btn btn-primary" href="index.html#comprar">Ver o ebook</a>
+      <a class="about-back" href="index.html">← Voltar pro site</a>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
