@@ -324,16 +324,6 @@ section { position: relative; }
 .price-card .kicker { color: var(--gold-hi); font-weight: 800; letter-spacing: .16em; text-transform: uppercase; font-size: 0.74rem; margin: 0 0 6px; }
 .price-card h3 { font-size: 1.6rem; margin: 6px 0 20px; }
 
-.value-stack {
-  margin: 0 0 22px; text-align: left; border-radius: 16px; padding: 12px 16px;
-  background: rgba(4, 8, 20, 0.35); border: 1px solid var(--glass-line);
-}
-.vs-row { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; padding: 8px 0; font-size: 0.93rem; color: var(--text-2); }
-.vs-row .vs-price { font-weight: 700; color: var(--text); white-space: nowrap; font-variant-numeric: tabular-nums; }
-.vs-total { margin-top: 4px; padding-top: 12px; border-top: 1px dashed rgba(255,255,255,0.16); }
-.vs-total .vs-item { font-weight: 800; color: var(--text); }
-.vs-total .vs-price { font-weight: 800; font-size: 1.04rem; }
-
 .launch-box { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; margin: 0 0 14px; }
 .launch-badge {
   display: inline-flex; align-items: center; gap: 6px;
@@ -353,6 +343,7 @@ section { position: relative; }
   font-size: 1.6rem; font-weight: 700; color: var(--text-3); align-self: center;
   text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: rgba(255,120,90,0.75);
 }
+.price-was:empty, .intl-was:empty { display: none; }
 .price-now { display: inline-flex; align-items: baseline; gap: 6px; }
 .price-main .cur { font-size: 1.5rem; font-weight: 800; color: var(--text); align-self: flex-start; margin-top: 14px; }
 .price-main .val {
@@ -692,35 +683,16 @@ html.js .reveal.in { opacity: 1; transform: none; }
         <p class="kicker">Ebook + 2 bônus · Edição refinada</p>
         <h3>Como destravar seu inglês</h3>
 
-        <div class="value-stack" aria-label="O que compõe a oferta e quanto cada item vale">
-          <div class="vs-row">
-            <span class="vs-item">Ebook "Como destravar seu inglês"</span>
-            <span class="vs-price">R$ 47</span>
-          </div>
-          <div class="vs-row">
-            <span class="vs-item">Bônus: Inglês para Situações Reais</span>
-            <span class="vs-price">R$ 27</span>
-          </div>
-          <div class="vs-row">
-            <span class="vs-item">Bônus: Desafio 30 Dias Para Destravar Seu Inglês</span>
-            <span class="vs-price">R$ 27</span>
-          </div>
-          <div class="vs-row vs-total">
-            <span class="vs-item">Tudo isso vale</span>
-            <span class="vs-price">R$ 101</span>
-          </div>
-        </div>
-
         <div class="launch-box" id="launchBox">
           <span class="launch-badge">🔥 Oferta de Lançamento</span>
           <span class="launch-timer">Termina em <b id="timerVal">15:00</b></span>
         </div>
 
         <div class="price-main">
-          <span class="price-was">R$ 101</span>
+          <span class="price-was" data-launch="R$ 15,90" data-regular="">R$ 15,90</span>
           <span class="price-now"><span class="cur">R$</span><span class="val" data-launch="9,90" data-regular="15,90">9,90</span></span>
         </div>
-        <p class="price-intl">Fora do Brasil? <b data-launch="US$ 2.99" data-regular="US$ 4.99">US$ 2.99</b> <span class="intl-was">(de US$ 32)</span> · <b data-launch="€ 2,99" data-regular="€ 4,99">€ 2,99</b> <span class="intl-was">(de € 27)</span></p>
+        <p class="price-intl">Fora do Brasil? <b data-launch="US$ 2.99" data-regular="US$ 4.99">US$ 2.99</b> <span class="intl-was" data-launch="(de US$ 4.99)" data-regular="">(de US$ 4.99)</span> · <b data-launch="€ 2,99" data-regular="€ 4,99">€ 2,99</b> <span class="intl-was" data-launch="(de € 4,99)" data-regular="">(de € 4,99)</span></p>
         <p class="price-tagline">Tudo isso, hoje, por <b data-launch="R$ 9,90" data-regular="R$ 15,90">R$ 9,90</b>. Pagamento único, acesso vitalício.</p>
 
         <ul class="price-list">
